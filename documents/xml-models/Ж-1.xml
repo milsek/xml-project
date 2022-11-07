@@ -1,0 +1,118 @@
+<zahtev-za-priznanje-ziga>
+    <naslov>
+        <naziv>
+            ЗАХТЕВ ЗА ПРИЗНАЊЕ ЖИГА
+        </naziv>
+        <podaci-o-izdavacu>
+            <naziv>
+                Заводу за интелектуалну својину
+            </naziv>
+            <adresa>
+                <ulica>
+                    <naziv>
+                        Кнегиње Љубице
+                    </naziv>
+                    <broj>
+                        5
+                    </broj>
+                </ulica>
+                <postanski-broj>
+                    11000
+                </postanski-broj>
+                <mesto>
+                    Београд
+                </mesto>
+            </adresa>
+        </podaci-o-izdavacu>
+    </naslov>
+
+    <podaci-koje-popunjava-podnosilac>
+        <podnosilac-prijave>
+            <ime></ime>
+            <prezime></prezime>
+            <adresa>
+                <ulica></ulica>
+                <broj></broj>
+                <postanski-broj></postanski-broj>
+                <mesto></mesto>
+                <drzava></drzava>
+            </adresa>
+            <kontakt>
+                <telefon></telefon>
+                <email></email>
+                <faks></faks>
+            </kontakt>
+        </podnosilac-prijave>
+        
+        <puno-pomocnik>
+            <ime></ime>
+            <prezime></prezime>
+            <adresa>
+                <ulica></ulica>
+                <broj></broj>
+                <postanski-broj></postanski-broj>
+                <mesto></mesto>
+                <drzava></drzava>
+            </adresa>
+            <kontakt>
+                <telefon></telefon>
+                <email></email>
+                <faks></faks>
+            </kontakt>
+        </puno-pomocnik>
+
+        <zajednicki-predstavnik>            
+            <kontakt>
+                <telefon></telefon>
+                <email></email>
+                <faks></faks>
+            </kontakt>
+        </zajednicki-predstavnik>
+
+        <zig>
+            <tip-ziga></tip-ziga>
+            <znak-ziga></znak-ziga>
+            <izgled-znaka></izgled-znaka>
+        </zig>
+
+        <znak>
+            <boje></boje>
+            <transliteracija></transliteracija>
+            <prevod></prevod>
+            <opis></opis>
+        </znak>
+
+        <brojeve-klasa-robe-i-usluga></brojeve-klasa-robe-i-usluga>
+        <pravo-prvenstva-i-osnov></pravo-prvenstva-i-osnov>
+
+        <placenje-takse>
+            <osnovna-taksa></osnovna-taksa>
+            <klasa></klasa>
+            <graficko-resenje></graficko-resenje>
+            <ukupno></ukupno>
+        </placenje-takse>
+
+        <potpis></potpis>
+    </podaci-koje-popunjava-podnosilac>
+
+    
+    <podaci-koje-popunjava-zavod>
+        <prilozi-uz-zahtev>
+            <primerak-znaka></primerak-znaka>
+            <spisak-robe-i-usluga></spisak-robe-i-usluga>
+            <punomocje></punomocje>
+            <generalno-punomocje></generalno-punomocje>
+            <punomocje-naknadno-dostavljeno></punomocje-naknadno-dostavljeno>
+            <opsti-akt-o-kolektivnom-zigu></opsti-akt-o-kolektivnom-zigu>
+            <dokaz-o-pravu-prvenstva></dokaz-o-pravu-prvenstva>
+            <dokaz-o-uplati-takse></dokaz-o-uplati-takse>
+        </prilozi-uz-zahtev>
+
+        <identifikacija-ziga>
+            <broj-prijave-ziga></broj-prijave-ziga>
+            <datum-podnosenja></datum-podnosenja>
+        </identifikacija-ziga>
+
+    </podaci-koje-popunjava-zavod>
+
+</zahtev-za-priznanje-ziga>
