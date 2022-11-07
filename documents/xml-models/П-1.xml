@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zahtev-za-priznanje-patenta 
+     broj-prijave=""
+     datum-prijema=""
+     priznati-datum-podnosenja="">
+    <primalac-zahteva>
+        <naziv-primaoca>Завод за интелектуалну својину</naziv-primaoca>
+        <adresa-primaoca>
+            <ulica>
+                <naziv>Кнегиње Љубице</naziv>
+                <broj>5</broj>
+            </ulica>
+            <postanski-broj>11000</postanski-broj>
+            <mesto>Београд</mesto>
+            <drzava>Република Србија</drzava>
+        </adresa-primaoca>
+    </primalac-zahteva>
+    
+    <naziv-pronalaska>
+        <naziv-na-srpskom-jeziku></naziv-na-srpskom-jeziku>
+        <naziv-na-engleskom-jeziku></naziv-na-engleskom-jeziku>
+    </naziv-pronalaska>
+    
+    <podnosioci-prijave>
+        <podnosilac pronalazac="" glavni-predstavnik="">
+            <ime></ime>
+            <prezime></prezime>
+            <adresa>
+                <ulica>
+                    <naziv></naziv>
+                    <broj></broj>
+                </ulica>
+                <postanski-broj></postanski-broj>
+                <mesto></mesto>
+                <drzava></drzava>
+            </adresa>
+            <kontakt-podaci>
+                <broj-telefona></broj-telefona>
+                <broj-faksa></broj-faksa>
+                <e-posta></e-posta>
+            </kontakt-podaci>
+            <drzavljansto></drzavljansto>
+        </podnosilac>
+    </podnosioci-prijave>
+    
+    <pronalazaci>
+        <pronalazac anoniman="">
+            <ime></ime>
+            <prezime></prezime>
+            <adresa>
+                <ulica>
+                    <naziv></naziv>
+                    <broj></broj>
+                </ulica>
+                <postanski-broj></postanski-broj>
+                <mesto></mesto>
+                <drzava></drzava>
+            </adresa>
+            <kontakt-podaci>
+                <broj-telefona></broj-telefona>
+                <broj-faksa></broj-faksa>
+                <e-posta></e-posta>
+            </kontakt-podaci>
+        </pronalazac>
+    </pronalazaci>
+    
+    <punomocnik tip="">
+        <ime></ime>
+        <prezime></prezime>
+        <adresa>
+            <ulica>
+                <naziv></naziv>
+                <broj></broj>
+            </ulica>
+            <postanski-broj></postanski-broj>
+            <mesto></mesto>
+            <drzava></drzava>
+        </adresa>
+        <kontakt-podaci>
+            <broj-telefona></broj-telefona>
+            <e-posta></e-posta>
+        </kontakt-podaci>
+    </punomocnik>
+    
+    <podaci-o-dostavljanju nacin="">
+        <adresa-za-dostavljanje>
+            <ulica>
+                <naziv></naziv>
+                <broj></broj>
+            </ulica>
+            <postanski-broj></postanski-broj>
+            <mesto></mesto>
+        </adresa-za-dostavljanje>
+    </podaci-o-dostavljanju>
+    
+    <podaci-o-prvobitnoj-prijavi>
+        <broj-prijave></broj-prijave>
+        <datum-podnosenja-prijave></datum-podnosenja-prijave>
+    </podaci-o-prvobitnoj-prijavi>
+    
+    <zahtev-za-priznanje-prava-prvenstva-iz-ranijih-prijava>
+        <ranije-prijave>
+            <prijava>
+                <datum-podnosenja></datum-podnosenja>
+                <broj-prijave></broj-prijave>
+                <oznaka-organizacije></oznaka-organizacije>   
+            </prijava>
+        </ranije-prijave>
+    </zahtev-za-priznanje-prava-prvenstva-iz-ranijih-prijava>
+    
+</zahtev-za-priznanje-patenta>
