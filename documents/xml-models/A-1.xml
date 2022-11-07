@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<obrazac-a1>
+	<naslov>
+		<naziv>ЗАХТЕВ ЗА УНОШЕЊЕ У ЕВИДЕНЦИЈУ И ДЕПОНОВАЊЕ АУТОРСКИХ ДЕЛА</naziv>
+		<podaci-o-izdavacu>
+			<naziv>Завод за интелектуалну својину</naziv>
+			<adresa>
+				<ulica>
+					<naziv>
+						Кнегиње Љубице
+					</naziv>
+					<broj>
+						5
+					</broj>
+				</ulica>
+				<postanski-broj>
+					11000
+				</postanski-broj>
+				<mesto>
+					Београд
+				</mesto>
+			</adresa>
+		</podaci-o-izdavacu>
+	</naslov>
+
+	<autori>
+		<!-- PRAZNO U SLUČAJU ANONIMNOG AUTORA -->
+		<autor id=""> <!-- neki način identifikacije različitih autora -->
+			<ime></ime>
+			<prezime></prezime>
+			<pseudonim-znak></pseudonim-znak>
+			<adresa>
+				<ulica>
+					<naziv></naziv>
+					<broj></broj>
+				</ulica>
+				<postanski-broj></postanski-broj>
+				<mesto></mesto>
+				<drzava></drzava>
+			</adresa>
+			<drzavljanstvo></drzavljanstvo>
+			<godina-smrti></godina-smrti>
+		</autor>
+	</autori>
+
+	<podnosilac>
+		<telefon></telefon>
+		<e-mail></e-mail>
+
+		<fizicko-lice>
+			<ime></ime>
+			<prezime></prezime>
+			<adresa>
+				<ulica>
+					<naziv></naziv>
+					<broj></broj>
+				</ulica>
+				<postanski-broj></postanski-broj>
+				<mesto></mesto>
+				<drzava></drzava>
+			</adresa>
+			<drzavljanstvo></drzavljanstvo>
+		</fizicko-lice>
+
+		<pravno-lice>
+			<poslovno-ime></poslovno-ime>
+			<sediste></sediste>
+		</pravno-lice>
+
+		<punomocnik>
+			<ime></ime>
+			<prezime></prezime>
+			<adresa>
+				<ulica>
+					<naziv></naziv>
+					<broj></broj>
+				</ulica>
+				<postanski-broj></postanski-broj>
+				<mesto></mesto>
+				<drzava></drzava>
+			</adresa>
+			<drzavljanstvo></drzavljanstvo>
+		</punomocnik>
+
+		<potpis></potpis>
+	</podnosilac>
+
+	<autorsko-delo vrsta="" forma=""> <!-- vrsta: književno delo, muzičko delo, likovno delo, računarski program...; forma: štampani tekst, optički disk...; -->
+		<identifikator>
+			<naslov></naslov>
+			<alternativni-naslov></alternativni-naslov>
+		</identifikator>
+
+		<prerada>
+			<naslov-originala></naslov-originala>
+			<autor-originala>
+				<ime></ime>
+				<prezime></prezime>
+				<pseudonim-znak></pseudonim-znak>
+			</autor-originala>
+		</prerada>
+
+        <radni-odnos></radni-odnos>
+		<nacin-koriscenja></nacin-koriscenja>
+
+	</autorsko-delo>
+
+	<prilozi> <!-- opis autorskog dela (ako je podneto na optičkom disky) / primer autorskog dela (slika, video zapis, audio zapis)-->
+		<opis></opis>
+		<primer></primer>
+	</prilozi>
+
+	<identifikacija-prijave>
+		<broj>A-</broj>
+		<datum-podnosenja></datum-podnosenja>
+	</identifikacija-prijave>
+
+</obrazac-a1>
