@@ -1,9 +1,12 @@
-<zahtev-za-priznanje-ziga>
+<?xml version="1.0" encoding="UTF-8"?>
+<obrazac-z1 xmlns="z1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="z1 file:/home/dejan/Oxygen%20XML%20Editor%2025/Z1.xsd">
     <naslov>
         <naziv>
             ЗАХТЕВ ЗА ПРИЗНАЊЕ ЖИГА
         </naziv>
-        <podaci-o-izdavacu>
+        <izdavac>
             <naziv>
                 Заводу за интелектуалну својину
             </naziv>
@@ -16,25 +19,32 @@
                         5
                     </broj>
                 </ulica>
-                <postanski-broj>
-                    11000
-                </postanski-broj>
                 <mesto>
-                    Београд
+                    <naziv>
+                        Београд
+                    </naziv>
+                    <postanski-broj>
+                        11000
+                    </postanski-broj>
                 </mesto>
+                <drzava></drzava>
             </adresa>
-        </podaci-o-izdavacu>
+        </izdavac>
     </naslov>
-
-    <podaci-koje-popunjava-podnosilac>
-        <podnosilac-prijave>
-            <ime></ime>
-            <prezime></prezime>
+    
+    <popunjava-podnosilac>
+        <podnosilac-prijave xsi:type="FLice">
             <adresa>
-                <ulica></ulica>
-                <broj></broj>
-                <postanski-broj></postanski-broj>
-                <mesto></mesto>
+                <ulica>
+                    <naziv></naziv>
+                    <broj></broj>
+                </ulica>
+                <mesto>
+                    <naziv>
+                    </naziv>
+                    <postanski-broj>
+                    </postanski-broj>
+                </mesto>
                 <drzava></drzava>
             </adresa>
             <kontakt>
@@ -42,16 +52,21 @@
                 <email></email>
                 <faks></faks>
             </kontakt>
+            <ime></ime>
+            <prezime></prezime>
         </podnosilac-prijave>
-        
-        <puno-pomocnik>
-            <ime></ime>
-            <prezime></prezime>
+        <punopomocnik xsi:type="FLice">
             <adresa>
-                <ulica></ulica>
-                <broj></broj>
-                <postanski-broj></postanski-broj>
-                <mesto></mesto>
+                <ulica>
+                    <naziv></naziv>
+                    <broj></broj>
+                </ulica>
+                <mesto>
+                    <naziv>
+                    </naziv>
+                    <postanski-broj>
+                    </postanski-broj>
+                </mesto>
                 <drzava></drzava>
             </adresa>
             <kontakt>
@@ -59,44 +74,62 @@
                 <email></email>
                 <faks></faks>
             </kontakt>
-        </puno-pomocnik>
-
-        <zajednicki-predstavnik>            
+            <ime></ime>
+            <prezime></prezime>
+        </punopomocnik>
+        
+        <zajednicki-predstavnik xsi:type="FLice">  
+            <adresa>
+                <ulica>
+                    <naziv></naziv>
+                    <broj></broj>
+                </ulica>
+                <mesto>
+                    <naziv>
+                    </naziv>
+                    <postanski-broj>
+                    </postanski-broj>
+                </mesto>
+                <drzava></drzava>
+            </adresa>       
             <kontakt>
                 <telefon></telefon>
                 <email></email>
                 <faks></faks>
             </kontakt>
+            <ime></ime>
+            <prezime></prezime>
         </zajednicki-predstavnik>
-
+        
         <zig>
-            <tip-ziga></tip-ziga>
-            <znak-ziga></znak-ziga>
+            <tip-ziga>kolektivni</tip-ziga>
+            <znak-ziga>drugi</znak-ziga>
             <izgled-znaka></izgled-znaka>
         </zig>
-
+        
         <znak>
             <boje></boje>
             <transliteracija></transliteracija>
             <prevod></prevod>
             <opis></opis>
         </znak>
-
-        <brojeve-klasa-robe-i-usluga></brojeve-klasa-robe-i-usluga>
+        
+        <niceova-klasifikacija></niceova-klasifikacija>
         <pravo-prvenstva-i-osnov></pravo-prvenstva-i-osnov>
-
-        <placenje-takse>
+        
+        <placene-takse>
             <osnovna-taksa></osnovna-taksa>
-            <klasa></klasa>
-            <graficko-resenje></graficko-resenje>
+            <klasa-graficko-resenje>
+                <klasa></klasa>
+                <iznos></iznos>
+            </klasa-graficko-resenje>
             <ukupno></ukupno>
-        </placenje-takse>
-
-        <potpis></potpis>
-    </podaci-koje-popunjava-podnosilac>
-
+        </placene-takse>
+        
+    </popunjava-podnosilac>
     
-    <podaci-koje-popunjava-zavod>
+    
+    <popunjava-zavod>
         <prilozi-uz-zahtev>
             <primerak-znaka></primerak-znaka>
             <spisak-robe-i-usluga></spisak-robe-i-usluga>
@@ -107,12 +140,12 @@
             <dokaz-o-pravu-prvenstva></dokaz-o-pravu-prvenstva>
             <dokaz-o-uplati-takse></dokaz-o-uplati-takse>
         </prilozi-uz-zahtev>
-
+        
         <identifikacija-ziga>
             <broj-prijave-ziga></broj-prijave-ziga>
             <datum-podnosenja></datum-podnosenja>
         </identifikacija-ziga>
-
-    </podaci-koje-popunjava-zavod>
-
-</zahtev-za-priznanje-ziga>
+        
+    </popunjava-zavod>
+    
+</obrazac-z1>

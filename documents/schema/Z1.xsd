@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="z1" xmlns:z1="z1">
+    <xs:element name="obrazac-z1">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="z1:naslov"/>
+                <xs:element ref="z1:popunjava-podnosilac"/>
+                <xs:element ref="z1:popunjava-zavod"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="izdavac">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="naziv" type="xs:string"/>
+                <xs:element ref="z1:adresa"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="naslov">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="naziv" type="xs:string"/>
+                <xs:element ref="z1:izdavac"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="adresa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="z1:ulica"/>
+                <xs:element ref="z1:mesto"/>
+                <xs:element name="drzava" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ulica">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="naziv" type="xs:string"/>
+                <xs:element name="broj">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]*"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="mesto">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="naziv" type="xs:string"/>
+                <xs:element name="postanski-broj">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]{5}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="popunjava-podnosilac">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="5" minOccurs="1" name="podnosilac-prijave" type="z1:Lice"/>
+                <xs:element name="punopomocnik" type="z1:Lice"/>
+                <xs:element name="zajednicki-predstavnik" type="z1:Lice"/>
+                <xs:element ref="z1:zig"/>
+                <xs:element ref="z1:znak"/>
+                <xs:element ref="z1:nicanska-klasifikacija"/>
+                <xs:element name="pravo-prvenstva-i-osnov" type="xs:string"/>
+                <xs:element ref="z1:placene-takse"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType abstract="true" name="Lice">
+        <xs:sequence>
+            <xs:element ref="z1:adresa"/>
+            <xs:element ref="z1:kontakt"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="FLice">
+        <xs:complexContent>
+            <xs:extension base="z1:Lice">
+                <xs:sequence>
+                    <xs:element name="ime"/>
+                    <xs:element name="prezime"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="PLice">
+        <xs:complexContent>
+            <xs:extension base="z1:Lice">
+                <xs:sequence>
+                    <xs:element name="poslovno-ime"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="kontakt">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="telefon" type="xs:string"/>
+                <xs:element name="email">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[A-Za-z0-9._%+-]+@[A-Za-z0-9]+[.][A-Za-z]{2,}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="faks" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="zig">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tip-ziga">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="individualni"/>
+                            <xs:enumeration value="kolektivni"/>
+                            <xs:enumeration value="garancije"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="znak-ziga">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="verbalni"/>
+                            <xs:enumeration value="graficki"/>
+                            <xs:enumeration value="kombinovani"/>
+                            <xs:enumeration value="drugi"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="izgled-znaka" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="znak">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="z1:boje"/>
+                <xs:element name="transliteracija" type="xs:string"/>
+                <xs:element name="prevod" type="xs:string"/>
+                <xs:element name="opis" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="nicanska-klasifikacija">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="45" name="boja">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="1"/>
+                            <xs:enumeration value="2"/>
+                            <xs:enumeration value="3"/>
+                            <xs:enumeration value="4"/>
+                            <xs:enumeration value="5"/>
+                            <xs:enumeration value="6"/>
+                            <xs:enumeration value="7"/>
+                            <xs:enumeration value="8"/>
+                            <xs:enumeration value="9"/>
+                            <xs:enumeration value="10"/>
+                            <xs:enumeration value="11"/>
+                            <xs:enumeration value="12"/>
+                            <xs:enumeration value="13"/>
+                            <xs:enumeration value="14"/>
+                            <xs:enumeration value="15"/>
+                            <xs:enumeration value="16"/>
+                            <xs:enumeration value="17"/>
+                            <xs:enumeration value="18"/>
+                            <xs:enumeration value="19"/>
+                            <xs:enumeration value="20"/>
+                            <xs:enumeration value="21"/>
+                            <xs:enumeration value="22"/>
+                            <xs:enumeration value="23"/>
+                            <xs:enumeration value="24"/>
+                            <xs:enumeration value="25"/>
+                            <xs:enumeration value="26"/>
+                            <xs:enumeration value="27"/>
+                            <xs:enumeration value="28"/>
+                            <xs:enumeration value="29"/>
+                            <xs:enumeration value="30"/>
+                            <xs:enumeration value="31"/>
+                            <xs:enumeration value="32"/>
+                            <xs:enumeration value="33"/>
+                            <xs:enumeration value="34"/>
+                            <xs:enumeration value="35"/>
+                            <xs:enumeration value="36"/>
+                            <xs:enumeration value="37"/>
+                            <xs:enumeration value="38"/>
+                            <xs:enumeration value="39"/>
+                            <xs:enumeration value="40"/>
+                            <xs:enumeration value="41"/>
+                            <xs:enumeration value="42"/>
+                            <xs:enumeration value="43"/>
+                            <xs:enumeration value="44"/>
+                            <xs:enumeration value="45"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="boje">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="boja">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="plava"/>
+                            <xs:enumeration value="crvena"/>
+                            <xs:enumeration value="zelena"/>
+                            <xs:enumeration value="zuta"/>
+                            <xs:enumeration value="crna"/>
+                            <xs:enumeration value="bela"/>
+                            <xs:enumeration value="narandzasta"/>
+                            <xs:enumeration value="ljubicasta"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="placene-takse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="osnovna-taksa" type="xs:double"/>
+                <xs:element ref="z1:klasa-graficko-resenje"/>
+                <xs:element name="ukupno" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="klasa-graficko-resenje">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="klasa" type="xs:string"/>
+                <xs:element name="iznos" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="popunjava-zavod">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="z1:prilozi-uz-zahtev"/>
+                <xs:element ref="z1:identifikacija-ziga"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="prilozi-uz-zahtev">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="primerak-znaka" type="xs:string"/>
+                <xs:element name="spisak-robe-i-usluga" type="xs:string"/>
+                <xs:element name="punomocje" type="xs:string"/>
+                <xs:element name="generalno-punomocje" type="xs:string"/>
+                <xs:element name="punomocje-naknadno-dostavljeno" type="xs:string"/>
+                <xs:element name="opsti-akt-o-kolektivnom-zigu" type="xs:string"/>
+                <xs:element name="dokaz-o-pravu-prvenstva" type="xs:string"/>
+                <xs:element name="dokaz-o-uplati-takse" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="identifikacija-ziga">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="z1:broj-prijave-ziga"/>
+                <xs:element name="datum-podnosenja" type="xs:date"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="broj-prijave-ziga">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="godina">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:int">
+                            <xs:minExclusive value="1920"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="id">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:length value="4"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
