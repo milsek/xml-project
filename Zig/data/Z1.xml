@@ -1,0 +1,134 @@
+<obrazac-z1 xmlns="z1"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>
+    <naslov>
+        <naziv>ZAHTEV ZA PRIZNANjE ŽIGA</naziv>
+        <izdavac>
+            <naziv>Zavod za intelektualnu svojinu</naziv>
+            <adresa>
+                <ulica>
+                    <naziv>Kneginje Ljubice</naziv>
+                    <broj>5</broj>
+                </ulica>
+                <mesto>
+                    <naziv>Beograd</naziv>
+                    <postanski-broj>11000</postanski-broj>
+                </mesto>
+            </adresa>
+        </izdavac>
+    </naslov>
+    <popunjava-podnosilac>
+        <!--1 to 5 repetitions:-->
+        <podnosilac-prijave xmlns:z1="z1" xsi:type="z1:FLice">
+            <adresa>
+                <ulica>
+                    <naziv>Dositeja Obradovića</naziv>
+                    <broj>12</broj>
+                </ulica>
+                <mesto>
+                    <naziv>Novi Sad</naziv>
+                    <postanski-broj>21000</postanski-broj>
+                </mesto>
+                <drzava>Srbija</drzava>
+            </adresa>
+            <kontakt>
+                <telefon>061111111</telefon>
+                <email>test@test.test</email>
+                <faks>5551234567</faks>
+            </kontakt>
+            <ime>Marko</ime>
+            <prezime>Marković</prezime>
+        </podnosilac-prijave>
+        <punomocnik xmlns:z1="z1" xsi:type="z1:FLice">
+            <adresa>
+                <ulica>
+                    <naziv>Marka Kraljevića</naziv>
+                    <broj>12</broj>
+                </ulica>
+                <mesto>
+                    <naziv>Novi Sad</naziv>
+                    <postanski-broj>21000</postanski-broj>
+                </mesto>
+                <drzava>Srbija</drzava>
+            </adresa>
+            <kontakt>
+                <telefon>061111111</telefon>
+                <email>test@test.test</email>
+                <faks>5551234567</faks>
+            </kontakt>
+            <ime>Pera</ime>
+            <prezime>Peric</prezime>
+        </punomocnik>
+        <zajednicki-predstavnik xmlns:z1="z1" xsi:type="z1:FLice">
+            <adresa>
+                <ulica>
+                    <naziv>Mihajla Pupina</naziv>
+                    <broj>5</broj>
+                </ulica>
+                <mesto>
+                    <naziv>Novi Sad</naziv>
+                    <postanski-broj>21000</postanski-broj>
+                </mesto>
+                <drzava>Srbija</drzava>
+            </adresa>
+            <kontakt>
+                <telefon>061111111</telefon>
+                <email>test@test.test</email>
+                <faks>5551234567</faks>
+            </kontakt>
+            <ime>Mitar</ime>
+            <prezime>Mitric</prezime>
+        </zajednicki-predstavnik>
+        <zig>
+            <tip-ziga>individualni</tip-ziga>
+            <znak-ziga>
+                <postojeci>verbalni</postojeci>
+            </znak-ziga>
+            <izgled-znaka>izgled</izgled-znaka>
+        </zig>
+        <znak>
+            <boje>
+                <boja>zuta</boja>
+                <boja>zelena</boja>
+            </boje>
+            <transliteracija>literacija</transliteracija>
+            <prevod>prevodim znak</prevod>
+            <opis>opisujem znak</opis>
+        </znak>
+        <nicanska-klasifikacija>
+            <!--1 to 45 repetitions:-->
+            <broj>31</broj>
+            <broj>35</broj>
+            <broj>38</broj>
+        </nicanska-klasifikacija>
+        <pravo-prvenstva-i-osnov>pravo prvenstva</pravo-prvenstva-i-osnov>
+        <placene-takse>
+            <osnovna-taksa>10</osnovna-taksa>
+            <klasa-graficko-resenje>
+                <klasa>prva</klasa>
+                <iznos>50</iznos>
+            </klasa-graficko-resenje>
+            <ukupno>60</ukupno>
+        </placene-takse>
+    </popunjava-podnosilac>
+    <popunjava-zavod>
+        <prilozi-uz-zahtev>
+            <primerak-znaka></primerak-znaka>
+            <spisak-robe-i-usluga></spisak-robe-i-usluga>
+            <punomocje></punomocje>
+            <generalno-punomocje></generalno-punomocje>
+            <punomocje-naknadno-dostavljeno></punomocje-naknadno-dostavljeno>
+            <opsti-akt-o-kolektivnom-zigu></opsti-akt-o-kolektivnom-zigu>
+            <dokaz-o-pravu-prvenstva></dokaz-o-pravu-prvenstva>
+            <dokaz-o-uplati-takse></dokaz-o-uplati-takse>
+        </prilozi-uz-zahtev>
+        <identifikacija-ziga>
+            <broj-prijave-ziga>
+                <godina>1921</godina>
+                <id>1234</id>
+            </broj-prijave-ziga>
+            <datum-podnosenja>2004-02-14</datum-podnosenja>
+        </identifikacija-ziga>
+    </popunjava-zavod>
+
+</obrazac-z1>
