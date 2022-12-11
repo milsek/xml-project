@@ -13,13 +13,12 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import java.io.File;
+import java.io.StringWriter;
 
 public class XMLCustomParser {
 
 
     public static <T> T unmarshall(String fileName, Class<T> obrazac) throws JAXBException {
-
-        System.out.println("[INFO] Example 1: JAXB unmarshalling.\n");
 
         JAXBContext context = JAXBContext.newInstance(fileName+".model");
 
@@ -48,11 +47,15 @@ public class XMLCustomParser {
 
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 
-        marshaller.marshal(obrazac, System.out);
-            System.out.println("--------");
+        StringWriter sw = new StringWriter();
+
+        marshaller.marshal(obrazac, sw);
+        System.out.println(sw);
+        System.out.println("Marshall sucessfull");
         return true;
         }
         catch (JAXBException | SAXException e){
+            System.out.println("Marshalling unsuccessful");;
             return false;
         }
     }
