@@ -43,13 +43,6 @@
             <xs:sequence>
                 <xs:element ref="z1:ulica"/>
                 <xs:element ref="z1:mesto"/>
-                <xs:element name="drzava" minOccurs="0">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:minLength value="1"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -87,6 +80,13 @@
                     <xs:simpleType>
                         <xs:restriction base="xs:string">
                             <xs:pattern value="[1-3][0-9]{4}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element minOccurs="0" name="drzava">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:element>

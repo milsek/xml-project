@@ -39,7 +39,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "ulica",
     "mesto",
-    "drzava"
 })
 @XmlRootElement(name = "adresa", namespace = "z1")
 public class Adresa {
@@ -48,8 +47,6 @@ public class Adresa {
     protected Ulica ulica;
     @XmlElement(namespace = "z1", required = true)
     protected Mesto mesto;
-    @XmlElement(namespace = "z1")
-    protected String drzava;
 
     /**
      * Gets the value of the ulica property.
@@ -107,28 +104,11 @@ public class Adresa {
      *     {@link String }
      *     
      */
-    public String getDrzava() {
-        return drzava;
-    }
-
-    /**
-     * Sets the value of the drzava property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDrzava(String value) {
-        this.drzava = value;
-    }
-
     public String toString(int numOfTabs) {
         String tabs = "";
         for(int i = 0; i < numOfTabs; i++){
             tabs += "\t";
         }
-        String drzavaDeo = drzava == null ? "drzava= " + drzava : "";
         return "\n"+tabs+"Adresa{" +
                 "\n\t"+tabs+"" + ulica.toString(numOfTabs+1) +
                 ",\n\t"+tabs+"" + mesto.toString(numOfTabs+1) +

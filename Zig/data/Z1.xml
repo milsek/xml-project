@@ -28,8 +28,8 @@
                 <mesto>
                     <naziv>Novi Sad</naziv>
                     <postanski-broj>21000</postanski-broj>
+                    <drzava>Srbija</drzava>
                 </mesto>
-                <drzava>Srbija</drzava>
             </adresa>
             <kontakt>
                 <telefon>061111111</telefon>
@@ -48,8 +48,8 @@
                 <mesto>
                     <naziv>Novi Sad</naziv>
                     <postanski-broj>21000</postanski-broj>
+                    <drzava>Srbija</drzava>
                 </mesto>
-                <drzava>Srbija</drzava>
             </adresa>
             <kontakt>
                 <telefon>061111111</telefon>
@@ -68,8 +68,8 @@
                 <mesto>
                     <naziv>Novi Sad</naziv>
                     <postanski-broj>21000</postanski-broj>
+                    <drzava>Srbija</drzava>
                 </mesto>
-                <drzava>Srbija</drzava>
             </adresa>
             <kontakt>
                 <telefon>061111111</telefon>

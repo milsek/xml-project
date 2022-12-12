@@ -43,7 +43,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "naziv",
-    "postanskiBroj"
+    "postanskiBroj",
+        "drzava"
 })
 @XmlRootElement(name = "mesto", namespace = "z1")
 public class Mesto {
@@ -52,6 +53,9 @@ public class Mesto {
     protected String naziv;
     @XmlElement(name = "postanski-broj", namespace = "z1", required = true)
     protected String postanskiBroj;
+
+    @XmlElement(namespace = "z1")
+    protected String drzava;
 
     /**
      * Gets the value of the naziv property.
@@ -101,14 +105,33 @@ public class Mesto {
         this.postanskiBroj = value;
     }
 
+    public String getDrzava() {
+        return drzava;
+    }
+
+    /**
+     * Sets the value of the drzava property.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *
+     */
+    public void setDrzava(String value) {
+        this.drzava = value;
+    }
+
+
     public String toString(int numOfTabs) {
         String tabs = "";
         for(int i = 0; i < numOfTabs; i++){
             tabs += "\t";
         }
+        String drzavaDeo = drzava != null ? drzava : "Srbija";
         return "\n\t"+tabs+"Mesto{" +
                 "\n\t"+tabs+"Naziv: " + naziv +
                 "\n\t"+tabs+"Postanski broj: " + postanskiBroj +
+                "\n\t"+tabs+"Drzava:  " + drzavaDeo +
                 '}';
     }
 }
