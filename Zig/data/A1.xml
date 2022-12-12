@@ -1,96 +1,96 @@
 <obrazac-a1 xmlns="a1"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <zaglavlje>
-        <naslov>naslov0</naslov>
+        <naslov>ЗАХТЕВ ЗА УНОШЕЊЕ У ЕВИДЕНЦИЈУ И ДЕПОНОВАЊЕ АУТОРСКИХ ДЕЛА</naslov>
         <podaci-o-izdavacu>
-            <naziv>naziv0</naziv>
+            <naziv>ЗАВОД ЗА ИНТЕЛЕКТУАЛНУ СВОЈИНУ</naziv>
             <adresa>
                 <ulica>
-                    <naziv>naziv1</naziv>
-                    <broj>50</broj>
+                    <naziv>Кнегиње Љубице</naziv>
+                    <broj>5</broj>
                 </ulica>
                 <mesto>
-                    <naziv>naziv2</naziv>
-                    <postanski-broj>50000</postanski-broj>
-                    <drzava>drzava0</drzava>
+                    <naziv>Београд</naziv>
+                    <postanski-broj>11000</postanski-broj>
+                    <drzava>Србија</drzava>
                 </mesto>
             </adresa>
         </podaci-o-izdavacu>
     </zaglavlje>
     <autori>
-        <autor>
-            <ime>ime0</ime>
-            <prezime>prezime0</prezime>
+        <autor id="1">
+            <ime>Никола</ime>
+            <prezime>Николић</prezime>
             <adresa>
                 <ulica>
-                    <naziv>naziv3</naziv>
-                    <broj>50</broj>
+                    <naziv>Карађорђева</naziv>
+                    <broj>55</broj>
                 </ulica>
                 <mesto>
-                    <naziv>naziv4</naziv>
-                    <postanski-broj>50000</postanski-broj>
-                    <drzava>drzava1</drzava>
+                    <naziv>Нови Сад</naziv>
+                    <postanski-broj>21000</postanski-broj>
+                    <drzava>Србија</drzava>
                 </mesto>
             </adresa>
-            <drzavljanstvo>drzavljanstvo0</drzavljanstvo>
+            <drzavljanstvo>српско</drzavljanstvo>
         </autor>
     </autori>
     <podnosilac xmlns:a1="a1" xsi:type="a1:t-pravno-lice">
-        <telefon>telefon0</telefon>
-        <e-mail>%@0.AA</e-mail>
-        <poslovno-ime>poslovno-ime0</poslovno-ime>
+        <telefon>00381552513563</telefon>
+        <e-mail>howardhamlin@hhm.com</e-mail>
+        <poslovno-ime>HHM</poslovno-ime>
         <sediste>
             <ulica>
-                <naziv>naziv5</naziv>
-                <broj>50</broj>
+                <naziv>Цара Душана</naziv>
+                <broj>86</broj>
             </ulica>
             <mesto>
-                <naziv>naziv6</naziv>
-                <postanski-broj>50000</postanski-broj>
-                <drzava>drzava2</drzava>
+                <naziv>Нови Сад</naziv>
+                <postanski-broj>21000</postanski-broj>
+                <drzava>Србија</drzava>
             </mesto>
         </sediste>
     </podnosilac>
     <punomocnik>
-        <ime>ime1</ime>
-        <prezime>prezime1</prezime>
+        <ime>Хауард</ime>
+        <prezime>Хамлин</prezime>
         <adresa>
             <ulica>
-                <naziv>naziv7</naziv>
-                <broj>50</broj>
+                <naziv>Јовова</naziv>
+                <broj>13</broj>
             </ulica>
             <mesto>
-                <naziv>naziv8</naziv>
-                <postanski-broj>50000</postanski-broj>
-                <drzava>drzava3</drzava>
+                <naziv>Нови Сад</naziv>
+                <postanski-broj>21000</postanski-broj>
+                <drzava>Србија</drzava>
             </mesto>
         </adresa>
-        <drzavljanstvo>drzavljanstvo1</drzavljanstvo>
+        <drzavljanstvo>drzavljanstvo0</drzavljanstvo>
     </punomocnik>
-    <autorsko-delo>
+    <autorsko-delo vrsta="LikovnoDelo" forma="SlikaNaPlatnu">
         <identifikator>
-            <naslov>naslov1</naslov>
-            <alternativni-naslov>alternativni-naslov0</alternativni-naslov>
+            <naslov>Јесен у Угљевику</naslov>
+            <alternativni-naslov>Угљевичка јесен</alternativni-naslov>
         </identifikator>
         <prerada>
-            <naslov-originala>naslov-originala0</naslov-originala>
+            <naslov-originala>Јесен у Дрездену</naslov-originala>
             <autor-originala>
-                <ime>ime2</ime>
-                <prezime>prezime2</prezime>
-                <pseudonim-znak>pseudonim-znak0</pseudonim-znak>
+                <ime>Ханс</ime>
+                <prezime>Хансен</prezime>
+                <pseudonim-znak>Ханси</pseudonim-znak>
             </autor-originala>
         </prerada>
-        <radni-odnos>da</radni-odnos>
-        <nacin-koriscenja>nacin-koriscenja0</nacin-koriscenja>
+        <radni-odnos>ne</radni-odnos>
+        <nacin-koriscenja>празно</nacin-koriscenja>
     </autorsko-delo>
     <prilozi>
         <primer>
             <odobren>da</odobren>
-            <putanja>putanja0</putanja>
+            <putanja>putanja-do-primera</putanja>
         </primer>
     </prilozi>
     <identifikacija-prijave>
-        <broj>A-0000-0000</broj>
-        <datum-podnosenja>2006-05-04</datum-podnosenja>
+        <broj>A-1234-2019</broj>
+        <datum-podnosenja>2019-05-04</datum-podnosenja>
     </identifikacija-prijave>
 </obrazac-a1>

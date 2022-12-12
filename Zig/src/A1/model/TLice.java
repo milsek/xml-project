@@ -44,7 +44,6 @@ import javax.xml.bind.annotation.XmlType;
     TFizickoLice.class
 })
 public abstract class TLice {
-
     @XmlElement(namespace = "a1", required = true)
     protected String telefon;
     @XmlElement(name = "e-mail", namespace = "a1", required = true)

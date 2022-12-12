@@ -1663,7 +1663,5 @@ public class ObrazacA1 {
             }
 
         }
-
     }
-
 }

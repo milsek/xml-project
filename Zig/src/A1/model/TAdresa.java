@@ -220,7 +220,6 @@ public class TAdresa {
         public void setDrzava(String value) {
             this.drzava = value;
         }
-
     }
 
 
@@ -304,7 +303,6 @@ public class TAdresa {
         public void setBroj(BigInteger value) {
             this.broj = value;
         }
-
     }
 
 }

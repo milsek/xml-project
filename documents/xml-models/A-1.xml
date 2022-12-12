@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <obrazac-a1>
-	<naslov>
-		<naziv>ЗАХТЕВ ЗА УНОШЕЊЕ У ЕВИДЕНЦИЈУ И ДЕПОНОВАЊЕ АУТОРСКИХ ДЕЛА</naziv>
+	<zaglavlje>
+		<naslov>ЗАХТЕВ ЗА УНОШЕЊЕ У ЕВИДЕНЦИЈУ И ДЕПОНОВАЊЕ АУТОРСКИХ ДЕЛА</naslov>
 		<podaci-o-izdavacu>
 			<naziv>Завод за интелектуалну својину</naziv>
 			<adresa>
@@ -13,15 +13,17 @@
 						5
 					</broj>
 				</ulica>
-				<postanski-broj>
-					11000
-				</postanski-broj>
 				<mesto>
-					Београд
+					<naziv>
+						Београд
+					</naziv>
+					<postanski-broj>
+						11000
+					</postanski-broj>
 				</mesto>
 			</adresa>
 		</podaci-o-izdavacu>
-	</naslov>
+	</zaglavlje>
 
 	<autori>
 		<!-- PRAZNO U SLUČAJU ANONIMNOG AUTORA -->
@@ -34,8 +36,10 @@
 					<naziv></naziv>
 					<broj></broj>
 				</ulica>
-				<postanski-broj></postanski-broj>
-				<mesto></mesto>
+				<mesto>
+					<naziv></naziv>
+					<postanski-broj></postanski-broj>
+				</mesto>
 				<drzava></drzava>
 			</adresa>
 			<drzavljanstvo></drzavljanstvo>
@@ -100,7 +104,7 @@
 			</autor-originala>
 		</prerada>
 
-        <radni-odnos></radni-odnos>
+		<radni-odnos></radni-odnos>
 		<nacin-koriscenja></nacin-koriscenja>
 
 	</autorsko-delo>
