@@ -4,7 +4,6 @@ import Parser.XMLCustomParser;
 import Z1.model.FLice;
 import Z1.model.ObrazacZ1;
 
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 
 public class Main {
