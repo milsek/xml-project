@@ -13,8 +13,9 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import java.io.File;
+import java.io.IOException;
 import java.io.StringWriter;
-
+import java.io.FileWriter;
 public class XMLCustomParser {
 
 
@@ -51,6 +52,13 @@ public class XMLCustomParser {
 
         marshaller.marshal(obrazac, sw);
         System.out.println(sw);
+            try {
+                FileWriter myWriter = new FileWriter("data/" + fileName + "Result.xml");
+                myWriter.write(String.valueOf(sw));
+                myWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         System.out.println("Marshall sucessfull");
         return true;
         }
