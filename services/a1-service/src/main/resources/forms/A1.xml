@@ -1,0 +1,96 @@
+<obrazac-a1 xmlns="a1"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <zaglavlje>
+        <naslov>ЗАХТЕВ ЗА УНОШЕЊЕ У ЕВИДЕНЦИЈУ И ДЕПОНОВАЊЕ АУТОРСКИХ ДЕЛА</naslov>
+        <podaci-o-izdavacu>
+            <naziv>ЗАВОД ЗА ИНТЕЛЕКТУАЛНУ СВОЈИНУ</naziv>
+            <adresa>
+                <ulica>
+                    <naziv>Кнегиње Љубице</naziv>
+                    <broj>5</broj>
+                </ulica>
+                <mesto>
+                    <naziv>Београд</naziv>
+                    <postanski-broj>11000</postanski-broj>
+                    <drzava>Србија</drzava>
+                </mesto>
+            </adresa>
+        </podaci-o-izdavacu>
+    </zaglavlje>
+    <autori>
+        <autor id="1">
+            <ime>Никола</ime>
+            <prezime>Николић</prezime>
+            <adresa>
+                <ulica>
+                    <naziv>Карађорђева</naziv>
+                    <broj>55</broj>
+                </ulica>
+                <mesto>
+                    <naziv>Нови Сад</naziv>
+                    <postanski-broj>21000</postanski-broj>
+                    <drzava>Србија</drzava>
+                </mesto>
+            </adresa>
+            <drzavljanstvo>српско</drzavljanstvo>
+        </autor>
+    </autori>
+    <podnosilac xmlns:a1="a1" xsi:type="a1:t-pravno-lice">
+        <telefon>00381552513563</telefon>
+        <e-mail>howardhamlin@hhm.com</e-mail>
+        <poslovno-ime>HHM</poslovno-ime>
+        <sediste>
+            <ulica>
+                <naziv>Цара Душана</naziv>
+                <broj>86</broj>
+            </ulica>
+            <mesto>
+                <naziv>Нови Сад</naziv>
+                <postanski-broj>21000</postanski-broj>
+                <drzava>Србија</drzava>
+            </mesto>
+        </sediste>
+    </podnosilac>
+    <punomocnik>
+        <ime>Хауард</ime>
+        <prezime>Хамлин</prezime>
+        <adresa>
+            <ulica>
+                <naziv>Јовова</naziv>
+                <broj>13</broj>
+            </ulica>
+            <mesto>
+                <naziv>Нови Сад</naziv>
+                <postanski-broj>21000</postanski-broj>
+                <drzava>Србија</drzava>
+            </mesto>
+        </adresa>
+        <drzavljanstvo>drzavljanstvo0</drzavljanstvo>
+    </punomocnik>
+    <autorsko-delo vrsta="LikovnoDelo" forma="SlikaNaPlatnu">
+        <identifikator>
+            <naslov>Јесен у Угљевику</naslov>
+            <alternativni-naslov>Угљевичка јесен</alternativni-naslov>
+        </identifikator>
+        <prerada>
+            <naslov-originala>Јесен у Дрездену</naslov-originala>
+            <autor-originala>
+                <ime>Ханс</ime>
+                <prezime>Хансен</prezime>
+                <pseudonim-znak>Ханси</pseudonim-znak>
+            </autor-originala>
+        </prerada>
+        <radni-odnos>ne</radni-odnos>
+        <nacin-koriscenja>празно</nacin-koriscenja>
+    </autorsko-delo>
+    <prilozi>
+        <primer>
+            <odobren>da</odobren>
+            <putanja>putanja-do-primera</putanja>
+        </primer>
+    </prilozi>
+    <identifikacija-prijave>
+        <broj>A-1234-2019</broj>
+        <datum-podnosenja>2019-05-04</datum-podnosenja>
+    </identifikacija-prijave>
+</obrazac-a1>

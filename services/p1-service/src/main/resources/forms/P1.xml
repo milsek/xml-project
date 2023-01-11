@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<obrazac-p1 xmlns="p1"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="p1 file:/C:/Users/User/Desktop/%D0%9F-1.xsd" broj-prijave="50" datum-prijave="2022-09-09" priznati-datum-prijave="2022-12-09">
+    <primalac-zahteva>
+        <naziv>Zavod za intelektualnu svojinu</naziv>
+        <adresa>
+            <ulica>
+                <naziv>Kneginje Ljubice</naziv>
+                <broj>5</broj>
+            </ulica>
+            <mesto>
+                <naziv>Beograd</naziv>
+                <postanski-broj>11000</postanski-broj>
+                <drzava>Republika Srbija</drzava>
+            </mesto>
+        </adresa>
+    </primalac-zahteva>
+    <naziv-pronalaska jezik="srpski">Autonomno vozilo</naziv-pronalaska>
+    <naziv-pronalaska jezik="engleski">Autonomous vehicle</naziv-pronalaska>
+    <podnosilac xmlns:p1="p1" xsi:type="p1:t-podnosilac-fizicko-lice">
+        <adresa>
+            <ulica>
+                <naziv>Dr Sime Milosevica</naziv>
+                <broj>8</broj>
+            </ulica>
+            <mesto>
+                <naziv>Novi Sad</naziv>
+                <postanski-broj>21000</postanski-broj>
+                <drzava>Republika Srbija</drzava>
+            </mesto>
+        </adresa>
+        <broj-telefona>0661234567</broj-telefona>
+        <e-mail>marko.markovic@gmail.com</e-mail>
+        <broj-faksa>066123456</broj-faksa>
+        <ime>Marko</ime>
+        <prezime>Markovic</prezime>
+        <drzavljanstvo>Srb</drzavljanstvo>
+    </podnosilac>
+    <pronalazac>
+        <adresa>
+            <ulica>
+                <naziv>Strazilovksa</naziv>
+                <broj>10</broj>
+            </ulica>
+            <mesto>
+                <naziv>Novi Sad</naziv>
+                <postanski-broj>21000</postanski-broj>
+                <drzava>Republika Srbija</drzava>
+            </mesto>
+        </adresa>
+        <broj-telefona>061231345</broj-telefona>
+        <e-mail>petar.petrovic@gmail.com</e-mail>
+        <broj-faksa>0612313131</broj-faksa>
+        <ime>Petar</ime>
+        <prezime>Petrovic</prezime>
+    </pronalazac>
+    <punomocnik xmlns:p1="p1" xsi:type="p1:t-punomocnik-pravno-lice" tip="Punomocnik za zastupanje">
+        <adresa>
+            <ulica>
+                <naziv>Bulevar Oslobodjenja</naziv>
+                <broj>50</broj>
+            </ulica>
+            <mesto>
+                <naziv>Novi Sad</naziv>
+                <postanski-broj>21000</postanski-broj>
+                <drzava>Republika Srbija</drzava>
+            </mesto>
+        </adresa>
+        <broj-telefona>062131131</broj-telefona>
+        <e-mail>doo.jovanovic@gmail.com</e-mail>
+        <poslovno-ime>DOO-Jovanovic</poslovno-ime>
+    </punomocnik>
+    <podaci-o-dostavljanju nacin="elektronski dokument">
+        <adresa>
+            <ulica>
+                <naziv>Bulevar Oslobodjenja</naziv>
+                <broj>10</broj>
+            </ulica>
+            <mesto>
+                <naziv>Novi Sad</naziv>
+                <postanski-broj>21000</postanski-broj>
+                <drzava>Republika Srbija</drzava>
+            </mesto>
+        </adresa>
+    </podaci-o-dostavljanju>
+    <podaci-o-prvobitnoj-prijavi>
+        <broj-prijave>24</broj-prijave>
+        <datum-podnosenja>2021-05-04</datum-podnosenja>
+    </podaci-o-prvobitnoj-prijavi>
+    <zahtev-za-priznanje-prava-prvenstva>
+        <ranija-prijava>
+            <datum-podnosenja>2021-08-04</datum-podnosenja>
+            <broj>24</broj>
+            <oznaka-organizacije>RS</oznaka-organizacije>
+        </ranija-prijava>
+        <ranija-prijava>
+            <datum-podnosenja>2021-10-05</datum-podnosenja>
+            <broj>26</broj>
+            <oznaka-organizacije>RS</oznaka-organizacije>
+        </ranija-prijava>
+    </zahtev-za-priznanje-prava-prvenstva>
+</obrazac-p1>
