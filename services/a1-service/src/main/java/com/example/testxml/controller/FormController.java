@@ -1,6 +1,7 @@
 package com.example.testxml.controller;
 
-import com.example.testxml.model.ObrazacA1;
+import com.example.testxml.model.Obrasci;
+import com.example.testxml.model.Obrasci;
 import com.example.testxml.service.FormService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,8 +18,9 @@ public class FormController {
     FormService formService;
 
     @GetMapping(value = "", produces = MediaType.APPLICATION_XML_VALUE)
-    public ResponseEntity<ObrazacA1> getForm() {
-        ObrazacA1 form = formService.getForm();
+    public ResponseEntity<Obrasci> getForm() {
+        Obrasci form = formService.getForm();
+        System.out.println(form);
         return new ResponseEntity<>(form, form == null ? HttpStatus.INTERNAL_SERVER_ERROR : HttpStatus.OK );
     }
 
