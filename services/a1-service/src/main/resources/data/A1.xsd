@@ -103,7 +103,7 @@
                         </xs:sequence>
                         <xs:attribute name="id" type="xs:nonNegativeInteger"/>
                         <xs:attribute name="datum-podnosenja" type="xs:date"/>
-                        <xs:attribute name="broj-projave" type="a1:t-broj-prijave"/>
+                        <xs:attribute name="broj-prijave" type="a1:t-broj-prijave"/>
                         <xs:attribute name="status" type="a1:t-status-prijave"/>
                     </xs:complexType>
                 </xs:element>

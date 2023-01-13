@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-           targetNamespace="z1" xmlns:z1="z1">
-    <xs:element name="obrazac-z1">
+    targetNamespace="http://www.ftn.uns.ac.rs/z1" xmlns:z1="http://www.ftn.uns.ac.rs/z1">
+    <xs:element name="obrasci">
         <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="z1:naslov"/>
-                <xs:element ref="z1:popunjava-podnosilac"/>
-                <xs:element ref="z1:popunjava-zavod"/>
+            <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                <xs:element name="obrazac-z1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="z1:naslov"/>
+                            <xs:element ref="z1:popunjava-podnosilac"/>
+                            <xs:element ref="z1:popunjava-zavod"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:nonNegativeInteger"/>
+                        <xs:attribute name="datum-podnosenja" type="xs:date"/>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -311,7 +319,7 @@
                 <xs:element name="punomocje" type="xs:string" minOccurs="0"/>
                 <xs:element name="generalno-punomocje" type="xs:string" minOccurs="0"/>
                 <xs:element name="punomocje-naknadno-dostavljeno" type="xs:string" maxOccurs="1"
-                            minOccurs="0"/>
+                    minOccurs="0"/>
                 <xs:element name="opsti-akt-o-kolektivnom-zigu" type="xs:string" minOccurs="0"/>
                 <xs:element name="dokaz-o-pravu-prvenstva" type="xs:string" minOccurs="0"/>
                 <xs:element name="dokaz-o-uplati-takse" type="xs:string" minOccurs="0"/>
@@ -322,7 +330,6 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="z1:broj-prijave-ziga"/>
-                <xs:element name="datum-podnosenja" type="xs:date"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

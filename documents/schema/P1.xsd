@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-    targetNamespace="p1" xmlns:p1="p1">
+    targetNamespace="http://www.ftn.uns.ac.rs/p1" xmlns:p1="http://www.ftn.uns.ac.rs/p1">
 
+    <xs:element name="obrasci">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                <xs:element ref="p1:obrazac-p1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="obrazac-p1">
         <xs:complexType>
             <xs:sequence>
@@ -85,6 +92,7 @@
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
+            <xs:attribute name="id" type="xs:nonNegativeInteger"/>
             <xs:attribute name="broj-prijave" type="xs:positiveInteger" use="required"/>
             <xs:attribute name="datum-prijave" type="xs:date" use="required"/>
             <xs:attribute name="priznati-datum-prijave" type="xs:date" use="required"/>

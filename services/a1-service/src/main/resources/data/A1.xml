@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<obrasci xmlns="http://www.ftn.uns.ac.rs/a1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.ftn.uns.ac.rs/a1 ./A1.xsd">
+    <obrazac-a1 id="0" datum-podnosenja="2019-05-04" status="neobradjen" broj-prijave="A-1234-2019">
+        <zaglavlje>
+            <naslov>ЗАХТЕВ ЗА УНОШЕЊЕ У ЕВИДЕНЦИЈУ И ДЕПОНОВАЊЕ АУТОРСКИХ ДЕЛА</naslov>
+            <podaci-o-izdavacu>
+                <naziv>ЗАВОД ЗА ИНТЕЛЕКТУАЛНУ СВОЈИНУ</naziv>
+                <adresa>
+                    <ulica>
+                        <naziv>Кнегиње Љубице</naziv>
+                        <broj>5</broj>
+                    </ulica>
+                    <mesto>
+                        <naziv>Београд</naziv>
+                        <postanski-broj>11000</postanski-broj>
+                        <drzava>Србија</drzava>
+                    </mesto>
+                </adresa>
+            </podaci-o-izdavacu>
+        </zaglavlje>
+        <autori>
+            <autor id="1">
+                <ime>Никола</ime>
+                <prezime>Николић</prezime>
+                <adresa>
+                    <ulica>
+                        <naziv>Карађорђева</naziv>
+                        <broj>55</broj>
+                    </ulica>
+                    <mesto>
+                        <naziv>Нови Сад</naziv>
+                        <postanski-broj>21000</postanski-broj>
+                        <drzava>Србија</drzava>
+                    </mesto>
+                </adresa>
+                <drzavljanstvo>српско</drzavljanstvo>
+            </autor>
+        </autori>
+        <podnosilac xmlns:a1="http://www.ftn.uns.ac.rs/a1" xsi:type="a1:t-pravno-lice">
+            <telefon>00381552513563</telefon>
+            <e-mail>howardhamlin@hhm.com</e-mail>
+            <poslovno-ime>HHM</poslovno-ime>
+            <sediste>
+                <ulica>
+                    <naziv>Цара Душана</naziv>
+                    <broj>86</broj>
+                </ulica>
+                <mesto>
+                    <naziv>Нови Сад</naziv>
+                    <postanski-broj>21000</postanski-broj>
+                    <drzava>Србија</drzava>
+                </mesto>
+            </sediste>
+        </podnosilac>
+        <punomocnik>
+            <ime>Хауард</ime>
+            <prezime>Хамлин</prezime>
+            <adresa>
+                <ulica>
+                    <naziv>Јовова</naziv>
+                    <broj>13</broj>
+                </ulica>
+                <mesto>
+                    <naziv>Нови Сад</naziv>
+                    <postanski-broj>21000</postanski-broj>
+                    <drzava>Србија</drzava>
+                </mesto>
+            </adresa>
+            <drzavljanstvo>drzavljanstvo0</drzavljanstvo>
+        </punomocnik>
+        <autorsko-delo vrsta="Likovno delo" forma="Slika na platnu">
+            <identifikator>
+                <naslov>Јесен у Угљевику</naslov>
+            </identifikator>
+            <prerada>
+                <naslov-originala>Јесен у Дрездену</naslov-originala>
+                <autor-originala>
+                    <ime>Ханс</ime>
+                    <prezime>Хансен</prezime>
+                    <pseudonim-znak>Ханси</pseudonim-znak>
+                </autor-originala>
+            </prerada>
+            <radni-odnos>false</radni-odnos>
+            <nacin-koriscenja>празно</nacin-koriscenja>
+        </autorsko-delo>
+        <prilozi>
+            <primer>
+                <odobren>true</odobren>
+                <putanja>putanja-do-primera</putanja>
+            </primer>
+        </prilozi>
+    </obrazac-a1>
+    
+</obrasci>
