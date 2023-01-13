@@ -37,14 +37,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *                 &lt;sequence&gt;
  *                   &lt;element name="naziv" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *                   &lt;element name="postanski-broj"&gt;
- *                     &lt;simpleType&gt;
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}positiveInteger"&gt;
- *                         &lt;totalDigits value="5"/&gt;
- *                         &lt;pattern value="[0-9]{5}"/&gt;
- *                       &lt;/restriction&gt;
- *                     &lt;/simpleType&gt;
- *                   &lt;/element&gt;
+ *                   &lt;element name="postanski-broj" type="{http://www.ftn.uns.ac.rs/a1}t-postanski-broj"/&gt;
  *                   &lt;element name="drzava" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *                 &lt;/sequence&gt;
  *               &lt;/restriction&gt;
@@ -60,15 +53,15 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "t-adresa", namespace = "http://www.ftn.uns.ac.rs/p1", propOrder = {
+@XmlType(name = "t-adresa", namespace = "http://www.ftn.uns.ac.rs/a1", propOrder = {
     "ulica",
     "mesto"
 })
 public class TAdresa {
 
-    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
     protected TAdresa.Ulica ulica;
-    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
     protected TAdresa.Mesto mesto;
 
     /**
@@ -131,14 +124,7 @@ public class TAdresa {
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
      *       &lt;sequence&gt;
      *         &lt;element name="naziv" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-     *         &lt;element name="postanski-broj"&gt;
-     *           &lt;simpleType&gt;
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}positiveInteger"&gt;
-     *               &lt;totalDigits value="5"/&gt;
-     *               &lt;pattern value="[0-9]{5}"/&gt;
-     *             &lt;/restriction&gt;
-     *           &lt;/simpleType&gt;
-     *         &lt;/element&gt;
+     *         &lt;element name="postanski-broj" type="{http://www.ftn.uns.ac.rs/a1}t-postanski-broj"/&gt;
      *         &lt;element name="drzava" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
      *       &lt;/sequence&gt;
      *     &lt;/restriction&gt;
@@ -156,11 +142,11 @@ public class TAdresa {
     })
     public static class Mesto {
 
-        @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
+        @XmlElement(namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
         protected String naziv;
-        @XmlElement(name = "postanski-broj", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
+        @XmlElement(name = "postanski-broj", namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
         protected BigInteger postanskiBroj;
-        @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
+        @XmlElement(namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
         protected String drzava;
 
         /**
@@ -265,9 +251,9 @@ public class TAdresa {
     })
     public static class Ulica {
 
-        @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
+        @XmlElement(namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
         protected String naziv;
-        @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
+        @XmlElement(namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
         @XmlSchemaType(name = "positiveInteger")
         protected BigInteger broj;
 

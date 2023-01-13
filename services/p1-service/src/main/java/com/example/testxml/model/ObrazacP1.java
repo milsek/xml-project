@@ -1,17 +1,18 @@
+
 package com.example.testxml.model;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
@@ -20,116 +21,117 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="primalac-zahteva">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="naziv" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                   &lt;element name="adresa" type="{p1}t-adresa"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="naziv-pronalaska" maxOccurs="2" minOccurs="2">
- *           &lt;complexType>
- *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *                 &lt;attribute name="jezik" use="required">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                       &lt;enumeration value="srpski"/>
- *                       &lt;enumeration value="engleski"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *               &lt;/extension>
- *             &lt;/simpleContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="podnosilac" type="{p1}t-podnosilac"/>
- *         &lt;element name="pronalazac">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{p1}t-pronalazac">
- *                 &lt;attribute name="anoniman" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="punomocnik" type="{p1}t-punomocnik"/>
- *         &lt;element name="podaci-o-dostavljanju">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="adresa" type="{p1}t-adresa"/>
- *                 &lt;/sequence>
- *                 &lt;attribute name="nacin" use="required">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                       &lt;enumeration value="elektronski dokument"/>
- *                       &lt;enumeration value="papirni dokument"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="podaci-o-prvobitnoj-prijavi">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="broj-prijave" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/>
- *                   &lt;element name="datum-podnosenja" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="zahtev-za-priznanje-prava-prvenstva">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="ranija-prijava" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="datum-podnosenja" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *                             &lt;element name="broj" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/>
- *                             &lt;element name="oznaka-organizacije">
- *                               &lt;simpleType>
- *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                   &lt;pattern value="[A-Z][A-Z]"/>
- *                                 &lt;/restriction>
- *                               &lt;/simpleType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="broj-prijave" use="required" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
- *       &lt;attribute name="datum-prijave" use="required" type="{http://www.w3.org/2001/XMLSchema}date" />
- *       &lt;attribute name="priznati-datum-prijave" use="required" type="{http://www.w3.org/2001/XMLSchema}date" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="primalac-zahteva"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="naziv" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="adresa" type="{http://www.ftn.uns.ac.rs/p1}t-adresa"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="naziv-pronalaska" maxOccurs="2" minOccurs="2"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+ *                 &lt;attribute name="jezik" use="required"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                       &lt;enumeration value="srpski"/&gt;
+ *                       &lt;enumeration value="engleski"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="podnosilac" type="{http://www.ftn.uns.ac.rs/p1}t-podnosilac"/&gt;
+ *         &lt;element name="pronalazac"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{http://www.ftn.uns.ac.rs/p1}t-pronalazac"&gt;
+ *                 &lt;attribute name="anoniman" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="punomocnik" type="{http://www.ftn.uns.ac.rs/p1}t-punomocnik"/&gt;
+ *         &lt;element name="podaci-o-dostavljanju"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="adresa" type="{http://www.ftn.uns.ac.rs/p1}t-adresa"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="nacin" use="required"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                       &lt;enumeration value="elektronski dokument"/&gt;
+ *                       &lt;enumeration value="papirni dokument"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="podaci-o-prvobitnoj-prijavi"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="broj-prijave" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/&gt;
+ *                   &lt;element name="datum-podnosenja" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="zahtev-za-priznanje-prava-prvenstva"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="ranija-prijava" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="datum-podnosenja" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+ *                             &lt;element name="broj" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/&gt;
+ *                             &lt;element name="oznaka-organizacije"&gt;
+ *                               &lt;simpleType&gt;
+ *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                                   &lt;pattern value="[A-Z][A-Z]"/&gt;
+ *                                 &lt;/restriction&gt;
+ *                               &lt;/simpleType&gt;
+ *                             &lt;/element&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
+ *       &lt;attribute name="broj-prijave" use="required" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
+ *       &lt;attribute name="datum-prijave" use="required" type="{http://www.w3.org/2001/XMLSchema}date" /&gt;
+ *       &lt;attribute name="priznati-datum-prijave" use="required" type="{http://www.w3.org/2001/XMLSchema}date" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -145,25 +147,28 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "podaciOPrvobitnojPrijavi",
     "zahtevZaPriznanjePravaPrvenstva"
 })
-@XmlRootElement(name = "obrazac-p1", namespace = "p1")
+@XmlRootElement(name = "obrazac-p1", namespace = "http://www.ftn.uns.ac.rs/p1")
 public class ObrazacP1 {
 
-    @XmlElement(name = "primalac-zahteva", namespace = "p1", required = true)
+    @XmlElement(name = "primalac-zahteva", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
     protected ObrazacP1 .PrimalacZahteva primalacZahteva;
-    @XmlElement(name = "naziv-pronalaska", namespace = "p1", required = true)
+    @XmlElement(name = "naziv-pronalaska", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
     protected List<ObrazacP1 .NazivPronalaska> nazivPronalaska;
-    @XmlElement(namespace = "p1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
     protected TPodnosilac podnosilac;
-    @XmlElement(namespace = "p1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
     protected ObrazacP1 .Pronalazac pronalazac;
-    @XmlElement(namespace = "p1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
     protected TPunomocnik punomocnik;
-    @XmlElement(name = "podaci-o-dostavljanju", namespace = "p1", required = true)
+    @XmlElement(name = "podaci-o-dostavljanju", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
     protected ObrazacP1 .PodaciODostavljanju podaciODostavljanju;
-    @XmlElement(name = "podaci-o-prvobitnoj-prijavi", namespace = "p1", required = true)
+    @XmlElement(name = "podaci-o-prvobitnoj-prijavi", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
     protected ObrazacP1 .PodaciOPrvobitnojPrijavi podaciOPrvobitnojPrijavi;
-    @XmlElement(name = "zahtev-za-priznanje-prava-prvenstva", namespace = "p1", required = true)
+    @XmlElement(name = "zahtev-za-priznanje-prava-prvenstva", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
     protected ObrazacP1 .ZahtevZaPriznanjePravaPrvenstva zahtevZaPriznanjePravaPrvenstva;
+    @XmlAttribute(name = "id")
+    @XmlSchemaType(name = "nonNegativeInteger")
+    protected BigInteger id;
     @XmlAttribute(name = "broj-prijave", required = true)
     @XmlSchemaType(name = "positiveInteger")
     protected BigInteger brojPrijave;
@@ -204,7 +209,7 @@ public class ObrazacP1 {
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
+     * returned list will be present inside the Jakarta XML Binding object.
      * This is why there is not a <CODE>set</CODE> method for the nazivPronalaska property.
      * 
      * <p>
@@ -372,6 +377,30 @@ public class ObrazacP1 {
     }
 
     /**
+     * Gets the value of the id property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
+     */
+    public BigInteger getId() {
+        return id;
+    }
+
+    /**
+     * Sets the value of the id property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
+     */
+    public void setId(BigInteger value) {
+        this.id = value;
+    }
+
+    /**
      * Gets the value of the brojPrijave property.
      * 
      * @return
@@ -450,20 +479,20 @@ public class ObrazacP1 {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-     *       &lt;attribute name="jezik" use="required">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *             &lt;enumeration value="srpski"/>
-     *             &lt;enumeration value="engleski"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+     *       &lt;attribute name="jezik" use="required"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *             &lt;enumeration value="srpski"/&gt;
+     *             &lt;enumeration value="engleski"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -536,23 +565,23 @@ public class ObrazacP1 {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="adresa" type="{p1}t-adresa"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="nacin" use="required">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *             &lt;enumeration value="elektronski dokument"/>
-     *             &lt;enumeration value="papirni dokument"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="adresa" type="{http://www.ftn.uns.ac.rs/p1}t-adresa"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="nacin" use="required"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *             &lt;enumeration value="elektronski dokument"/&gt;
+     *             &lt;enumeration value="papirni dokument"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -563,7 +592,7 @@ public class ObrazacP1 {
     })
     public static class PodaciODostavljanju {
 
-        @XmlElement(namespace = "p1", required = true)
+        @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
         protected TAdresa adresa;
         @XmlAttribute(name = "nacin", required = true)
         protected String nacin;
@@ -625,16 +654,16 @@ public class ObrazacP1 {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="broj-prijave" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/>
-     *         &lt;element name="datum-podnosenja" type="{http://www.w3.org/2001/XMLSchema}date"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="broj-prijave" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/&gt;
+     *         &lt;element name="datum-podnosenja" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -646,10 +675,10 @@ public class ObrazacP1 {
     })
     public static class PodaciOPrvobitnojPrijavi {
 
-        @XmlElement(name = "broj-prijave", namespace = "p1", required = true)
+        @XmlElement(name = "broj-prijave", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
         @XmlSchemaType(name = "positiveInteger")
         protected BigInteger brojPrijave;
-        @XmlElement(name = "datum-podnosenja", namespace = "p1", required = true)
+        @XmlElement(name = "datum-podnosenja", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
         @XmlSchemaType(name = "date")
         protected XMLGregorianCalendar datumPodnosenja;
 
@@ -710,16 +739,16 @@ public class ObrazacP1 {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="naziv" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="adresa" type="{p1}t-adresa"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="naziv" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="adresa" type="{http://www.ftn.uns.ac.rs/p1}t-adresa"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -731,9 +760,9 @@ public class ObrazacP1 {
     })
     public static class PrimalacZahteva {
 
-        @XmlElement(namespace = "p1", required = true)
+        @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
         protected String naziv;
-        @XmlElement(namespace = "p1", required = true)
+        @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
         protected TAdresa adresa;
 
         /**
@@ -793,13 +822,13 @@ public class ObrazacP1 {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{p1}t-pronalazac">
-     *       &lt;attribute name="anoniman" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://www.ftn.uns.ac.rs/p1}t-pronalazac"&gt;
+     *       &lt;attribute name="anoniman" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -846,33 +875,33 @@ public class ObrazacP1 {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="ranija-prijava" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="datum-podnosenja" type="{http://www.w3.org/2001/XMLSchema}date"/>
-     *                   &lt;element name="broj" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/>
-     *                   &lt;element name="oznaka-organizacije">
-     *                     &lt;simpleType>
-     *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                         &lt;pattern value="[A-Z][A-Z]"/>
-     *                       &lt;/restriction>
-     *                     &lt;/simpleType>
-     *                   &lt;/element>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="ranija-prijava" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="datum-podnosenja" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+     *                   &lt;element name="broj" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/&gt;
+     *                   &lt;element name="oznaka-organizacije"&gt;
+     *                     &lt;simpleType&gt;
+     *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *                         &lt;pattern value="[A-Z][A-Z]"/&gt;
+     *                       &lt;/restriction&gt;
+     *                     &lt;/simpleType&gt;
+     *                   &lt;/element&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -883,7 +912,7 @@ public class ObrazacP1 {
     })
     public static class ZahtevZaPriznanjePravaPrvenstva {
 
-        @XmlElement(name = "ranija-prijava", namespace = "p1", required = true)
+        @XmlElement(name = "ranija-prijava", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
         protected List<ObrazacP1 .ZahtevZaPriznanjePravaPrvenstva.RanijaPrijava> ranijaPrijava;
 
         /**
@@ -892,7 +921,7 @@ public class ObrazacP1 {
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
+         * returned list will be present inside the Jakarta XML Binding object.
          * This is why there is not a <CODE>set</CODE> method for the ranijaPrijava property.
          * 
          * <p>
@@ -922,23 +951,23 @@ public class ObrazacP1 {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="datum-podnosenja" type="{http://www.w3.org/2001/XMLSchema}date"/>
-         *         &lt;element name="broj" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/>
-         *         &lt;element name="oznaka-organizacije">
-         *           &lt;simpleType>
-         *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *               &lt;pattern value="[A-Z][A-Z]"/>
-         *             &lt;/restriction>
-         *           &lt;/simpleType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="datum-podnosenja" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+         *         &lt;element name="broj" type="{http://www.w3.org/2001/XMLSchema}positiveInteger"/&gt;
+         *         &lt;element name="oznaka-organizacije"&gt;
+         *           &lt;simpleType&gt;
+         *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+         *               &lt;pattern value="[A-Z][A-Z]"/&gt;
+         *             &lt;/restriction&gt;
+         *           &lt;/simpleType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -951,13 +980,13 @@ public class ObrazacP1 {
         })
         public static class RanijaPrijava {
 
-            @XmlElement(name = "datum-podnosenja", namespace = "p1", required = true)
+            @XmlElement(name = "datum-podnosenja", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
             @XmlSchemaType(name = "date")
             protected XMLGregorianCalendar datumPodnosenja;
-            @XmlElement(namespace = "p1", required = true)
+            @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
             @XmlSchemaType(name = "positiveInteger")
             protected BigInteger broj;
-            @XmlElement(name = "oznaka-organizacije", namespace = "p1", required = true)
+            @XmlElement(name = "oznaka-organizacije", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
             protected String oznakaOrganizacije;
 
             /**

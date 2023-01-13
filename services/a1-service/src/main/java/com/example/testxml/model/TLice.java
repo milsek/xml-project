@@ -18,8 +18,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="adresa" type="{http://www.ftn.uns.ac.rs/p1}t-adresa"/&gt;
- *         &lt;element name="broj-telefona" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="telefon" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="e-mail"&gt;
  *           &lt;simpleType&gt;
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
@@ -36,71 +35,43 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "t-lice", namespace = "http://www.ftn.uns.ac.rs/p1", propOrder = {
-    "adresa",
-    "brojTelefona",
+@XmlType(name = "t-lice", namespace = "http://www.ftn.uns.ac.rs/a1", propOrder = {
+    "telefon",
     "eMail"
 })
 @XmlSeeAlso({
-    TPodnosilac.class,
-    TPronalazac.class,
-    TPunomocnik.class
+    TPravnoLice.class,
+    TFizickoLice.class
 })
 public abstract class TLice {
 
-    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
-    protected TAdresa adresa;
-    @XmlElement(name = "broj-telefona", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
-    protected String brojTelefona;
-    @XmlElement(name = "e-mail", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
+    protected String telefon;
+    @XmlElement(name = "e-mail", namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
     protected String eMail;
 
     /**
-     * Gets the value of the adresa property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TAdresa }
-     *     
-     */
-    public TAdresa getAdresa() {
-        return adresa;
-    }
-
-    /**
-     * Sets the value of the adresa property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TAdresa }
-     *     
-     */
-    public void setAdresa(TAdresa value) {
-        this.adresa = value;
-    }
-
-    /**
-     * Gets the value of the brojTelefona property.
+     * Gets the value of the telefon property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBrojTelefona() {
-        return brojTelefona;
+    public String getTelefon() {
+        return telefon;
     }
 
     /**
-     * Sets the value of the brojTelefona property.
+     * Sets the value of the telefon property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBrojTelefona(String value) {
-        this.brojTelefona = value;
+    public void setTelefon(String value) {
+        this.telefon = value;
     }
 
     /**

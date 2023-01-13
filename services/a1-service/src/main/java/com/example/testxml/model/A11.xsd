@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://www.ftn.uns.ac.rs/a1" xmlns:a1="http://www.ftn.uns.ac.rs/a1">
+
+    <xs:element name="obrasci">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                <xs:element name="obrazac-a1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="zaglavlje">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="naslov" type="xs:string"/>
+                                        <xs:element name="podaci-o-izdavacu">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="naziv" type="xs:string"/>
+                                                  <xs:element name="adresa" type="a1:t-adresa"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="autori">
+                                <xs:complexType>
+                                    <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                                        <xs:element name="autor">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="ime" type="xs:string"/>
+                                                  <xs:element name="prezime" type="xs:string"/>
+                                                  <xs:element minOccurs="0" name="pseudonim-znak"
+                                                  type="xs:string"/>
+                                                  <xs:element name="adresa" type="a1:t-adresa"/>
+                                                  <xs:element name="drzavljanstvo" type="xs:string"/>
+                                                  <xs:element minOccurs="0" name="godina-smrti"
+                                                  type="xs:integer"/>
+                                                </xs:sequence>
+                                                <xs:attribute name="id" type="xs:positiveInteger"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="podnosilac" type="a1:t-lice"/>
+                            <xs:element name="punomocnik" maxOccurs="1" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ime" type="xs:string"/>
+                                        <xs:element name="prezime" type="xs:string"/>
+                                        <xs:element name="adresa" type="a1:t-adresa"/>
+                                        <xs:element name="drzavljanstvo" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="autorsko-delo">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="identifikator">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="naslov" type="xs:string"/>
+                                                  <xs:element name="alternativni-naslov"
+                                                  type="xs:string" minOccurs="0"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="prerada" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="naslov-originala"
+                                                  type="xs:string"/>
+                                                  <xs:element name="autor-originala">
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+                                                  <xs:element name="ime" type="xs:string"/>
+                                                  <xs:element name="prezime" type="xs:string"/>
+                                                  <xs:element name="pseudonim-znak" type="xs:string"
+                                                  />
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="radni-odnos" type="xs:boolean"/>
+                                        <xs:element name="nacin-koriscenja" type="xs:string"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="vrsta" type="a1:t-vrsta-dela"/>
+                                    <xs:attribute name="forma" type="a1:t-forma-dela"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="prilozi">
+                                <xs:complexType>
+                                    <xs:choice>
+                                        <xs:element name="opis" type="a1:t-prilog" minOccurs="1"/>
+                                        <xs:element name="primer" type="a1:t-prilog" minOccurs="1"/>
+                                    </xs:choice>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:nonNegativeInteger"/>
+                        <xs:attribute name="datum-podnosenja" type="xs:date"/>
+                        <xs:attribute name="broj-projave" type="a1:t-broj-prijave"/>
+                        <xs:attribute name="status" type="a1:t-status-prijave"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="t-adresa">
+        <xs:sequence>
+            <xs:element name="ulica">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="naziv" type="xs:string"/>
+                        <xs:element name="broj" type="xs:positiveInteger"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="mesto">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="naziv" type="xs:string"/>
+                        <xs:element name="postanski-broj" type="a1:t-postanski-broj"/>
+                        <xs:element name="drzava" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="t-postanski-broj">
+        <xs:restriction>
+            <xs:simpleType>
+                <xs:restriction base="xs:positiveInteger">
+                    <xs:totalDigits value="5"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType abstract="true" name="t-lice">
+        <xs:sequence>
+            <xs:element name="telefon" type="xs:string"/>
+            <xs:element name="e-mail">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Za-z0-9._%+-]+@[A-Za-z0-9]+[.][A-Za-z]{2,}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="t-pravno-lice">
+        <xs:complexContent>
+            <xs:extension base="a1:t-lice">
+                <xs:sequence>
+                    <xs:element name="poslovno-ime" type="xs:string"/>
+                    <xs:element name="sediste" type="a1:t-adresa"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="t-fizicko-lice">
+        <xs:complexContent>
+            <xs:extension base="a1:t-lice">
+                <xs:sequence>
+                    <xs:element name="ime" type="xs:string"/>
+                    <xs:element name="prezime" type="xs:string"/>
+                    <xs:element name="adresa" type="a1:t-adresa"/>
+                    <xs:element name="drzavljanstvo" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:simpleType name="t-vrsta-dela">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Knjizevno delo"/>
+            <xs:enumeration value="Muzicko delo"/>
+            <xs:enumeration value="Likovno delo"/>
+            <xs:enumeration value="Racunarski program"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="t-forma-dela">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Stampani tekst"/>
+            <xs:enumeration value="Opticki disk"/>
+            <xs:enumeration value="Slika na platnu"/>
+            <xs:enumeration value="USB"/>
+            <xs:enumeration value="Notni zapis"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="t-broj-prijave">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="A-[0-9]{4}-[0-9]{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="t-status-prijave">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="obradjen"/>
+            <xs:enumeration value="neobradjen"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="t-prilog">
+        <xs:sequence>
+            <xs:element name="odobren" type="xs:boolean"/>
+            <xs:element name="putanja" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

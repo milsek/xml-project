@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import java.util.ArrayList;
@@ -45,10 +46,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "boja"
 })
-@XmlRootElement(name = "boje", namespace = "z1")
+@XmlRootElement(name = "boje", namespace = "http://www.ftn.uns.ac.rs/z1")
 public class Boje {
 
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected List<String> boja;
 
     /**
@@ -80,13 +81,4 @@ public class Boje {
         return this.boja;
     }
 
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        return "\n\t"+tabs+"Boje{" +
-                "\n\t"+tabs+"" + boja +
-                '}';
-    }
 }

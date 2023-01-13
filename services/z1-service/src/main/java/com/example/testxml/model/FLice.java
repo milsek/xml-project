@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;complexType name="FLice">
  *   &lt;complexContent>
- *     &lt;extension base="{z1}Lice">
+ *     &lt;extension base="{http://www.ftn.uns.ac.rs/z1}Lice">
  *       &lt;sequence>
  *         &lt;element name="ime" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="prezime" type="{http://www.w3.org/2001/XMLSchema}string"/>
@@ -27,7 +28,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FLice", namespace = "z1", propOrder = {
+@XmlType(name = "FLice", namespace = "http://www.ftn.uns.ac.rs/z1", propOrder = {
     "ime",
     "prezime"
 })
@@ -35,9 +36,9 @@ public class FLice
     extends Lice
 {
 
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String ime;
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String prezime;
 
     /**
@@ -88,16 +89,4 @@ public class FLice
         this.prezime = value;
     }
 
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        return "\n\t"+tabs+"FLice{" +
-                "\n\t"+tabs+"Ime: " + ime +
-                "\n\t"+tabs+"Prezime: " + prezime +
-                "\n\t"+tabs+"" + adresa.toString(numOfTabs+1) +
-                "\n\t"+tabs+"" + kontakt.toString(numOfTabs+1) +
-                '}';
-    }
 }

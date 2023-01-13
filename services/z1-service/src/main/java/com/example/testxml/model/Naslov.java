@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -24,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element ref="{z1}izdavac"/>
+ *         &lt;element ref="{http://www.ftn.uns.ac.rs/z1}izdavac"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,12 +39,12 @@ import javax.xml.bind.annotation.XmlType;
     "naziv",
     "izdavac"
 })
-@XmlRootElement(name = "naslov", namespace = "z1")
+@XmlRootElement(name = "naslov", namespace = "http://www.ftn.uns.ac.rs/z1")
 public class Naslov {
 
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String naziv;
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected Izdavac izdavac;
 
     /**
@@ -94,14 +95,4 @@ public class Naslov {
         this.izdavac = value;
     }
 
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        return "\n\t"+tabs+"Naslov{" +
-                "\n\t"+tabs+"" + naziv +
-                "\n\t"+tabs+"" + izdavac.toString(numOfTabs+1) +
-                '}';
-    }
 }

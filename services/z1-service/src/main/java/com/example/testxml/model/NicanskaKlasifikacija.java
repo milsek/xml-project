@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import java.util.ArrayList;
@@ -39,10 +40,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "broj"
 })
-@XmlRootElement(name = "nicanska-klasifikacija", namespace = "z1")
+@XmlRootElement(name = "nicanska-klasifikacija", namespace = "http://www.ftn.uns.ac.rs/z1")
 public class NicanskaKlasifikacija {
 
-    @XmlElement(namespace = "z1", type = Integer.class)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", type = Integer.class)
     protected List<Integer> broj;
 
     /**
@@ -74,13 +75,4 @@ public class NicanskaKlasifikacija {
         return this.broj;
     }
 
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        return "\n\t"+tabs+"NicanskaKlasifikacija{" +
-                "\n\t"+tabs+"" + broj +
-                '}';
-    }
 }

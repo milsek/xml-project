@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -17,8 +18,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{z1}adresa"/>
- *         &lt;element ref="{z1}kontakt"/>
+ *         &lt;element ref="{http://www.ftn.uns.ac.rs/z1}adresa"/>
+ *         &lt;element ref="{http://www.ftn.uns.ac.rs/z1}kontakt"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -28,7 +29,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Lice", namespace = "z1", propOrder = {
+@XmlType(name = "Lice", namespace = "http://www.ftn.uns.ac.rs/z1", propOrder = {
     "adresa",
     "kontakt"
 })
@@ -38,9 +39,9 @@ import javax.xml.bind.annotation.XmlType;
 })
 public abstract class Lice {
 
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected Adresa adresa;
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected Kontakt kontakt;
 
     /**
@@ -91,14 +92,4 @@ public abstract class Lice {
         this.kontakt = value;
     }
 
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        return "\n\t"+tabs+"Lice{" +
-                "\n\t"+tabs+"adresa=" + adresa.toString(numOfTabs+1) +
-                "\n\t"+tabs+"kontakt=" + kontakt.toString(numOfTabs+1) +
-                '}';
-    }
 }

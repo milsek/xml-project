@@ -8,16 +8,17 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for t-podnosilac-pravno-lice complex type.
+ * <p>Java class for t-pravno-lice complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="t-podnosilac-pravno-lice"&gt;
+ * &lt;complexType name="t-pravno-lice"&gt;
  *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.ftn.uns.ac.rs/p1}t-podnosilac"&gt;
+ *     &lt;extension base="{http://www.ftn.uns.ac.rs/a1}t-lice"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="poslovno-ime" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="sediste" type="{http://www.ftn.uns.ac.rs/a1}t-adresa"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/extension&gt;
  *   &lt;/complexContent&gt;
@@ -27,15 +28,18 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "t-podnosilac-pravno-lice", namespace = "http://www.ftn.uns.ac.rs/p1", propOrder = {
-    "poslovnoIme"
+@XmlType(name = "t-pravno-lice", namespace = "http://www.ftn.uns.ac.rs/a1", propOrder = {
+    "poslovnoIme",
+    "sediste"
 })
-public class TPodnosilacPravnoLice
-    extends TPodnosilac
+public class TPravnoLice
+    extends TLice
 {
 
-    @XmlElement(name = "poslovno-ime", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
+    @XmlElement(name = "poslovno-ime", namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
     protected String poslovnoIme;
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
+    protected TAdresa sediste;
 
     /**
      * Gets the value of the poslovnoIme property.
@@ -59,6 +63,30 @@ public class TPodnosilacPravnoLice
      */
     public void setPoslovnoIme(String value) {
         this.poslovnoIme = value;
+    }
+
+    /**
+     * Gets the value of the sediste property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TAdresa }
+     *     
+     */
+    public TAdresa getSediste() {
+        return sediste;
+    }
+
+    /**
+     * Sets the value of the sediste property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TAdresa }
+     *     
+     */
+    public void setSediste(TAdresa value) {
+        this.sediste = value;
     }
 
 }

@@ -1,11 +1,12 @@
+
 package com.example.testxml.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -14,33 +15,33 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="t-podnosilac">
- *   &lt;complexContent>
- *     &lt;extension base="{p1}t-lice">
- *       &lt;sequence>
- *         &lt;element name="broj-faksa" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *       &lt;/sequence>
- *       &lt;attribute name="pronalazac" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="t-podnosilac"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.ftn.uns.ac.rs/p1}t-lice"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="broj-faksa" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="pronalazac" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "t-podnosilac", namespace = "p1", propOrder = {
+@XmlType(name = "t-podnosilac", namespace = "http://www.ftn.uns.ac.rs/p1", propOrder = {
     "brojFaksa"
 })
 @XmlSeeAlso({
-    TPodnosilacPravnoLice.class,
-    TPodnosilacFizickoLice.class
+    TPodnosilacFizickoLice.class,
+    TPodnosilacPravnoLice.class
 })
 public abstract class TPodnosilac
     extends TLice
 {
 
-    @XmlElement(name = "broj-faksa", namespace = "p1", required = true)
+    @XmlElement(name = "broj-faksa", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
     protected String brojFaksa;
     @XmlAttribute(name = "pronalazac")
     protected Boolean pronalazac;

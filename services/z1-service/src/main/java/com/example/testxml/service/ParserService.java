@@ -23,7 +23,7 @@ public class ParserService {
     public static <T> T unmarshall(String fileName, Class<T> obrazac) throws JAXBException, IOException {
         JAXBContext context = JAXBContext.newInstance("com.example.testxml.model");
         Unmarshaller unmarshaller = context.createUnmarshaller();
-        Resource resource = new ClassPathResource("forms/" + fileName + ".xml");
+        Resource resource = new ClassPathResource("data/" + fileName + ".xml");
         return obrazac.cast(unmarshaller.unmarshal(new File(resource.getFile().toURI())));
     }
 
@@ -33,7 +33,7 @@ public class ParserService {
 
             Marshaller marshaller = context.createMarshaller();
 
-            Resource readingResource = new ClassPathResource("forms/" + fileName + ".xsd");
+            Resource readingResource = new ClassPathResource("data/" + fileName + ".xsd");
             File schemaFile = new File(readingResource.getFile().toURI());
             SchemaFactory schemaFactory = SchemaFactory
                     .newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);

@@ -1,9 +1,10 @@
+
 package com.example.testxml.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -12,22 +13,22 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="t-punomocnik-fizicko-lice">
- *   &lt;complexContent>
- *     &lt;extension base="{p1}t-punomocnik">
- *       &lt;sequence>
- *         &lt;element name="ime" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="prezime" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="t-punomocnik-fizicko-lice"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.ftn.uns.ac.rs/p1}t-punomocnik"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="ime" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="prezime" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "t-punomocnik-fizicko-lice", namespace = "p1", propOrder = {
+@XmlType(name = "t-punomocnik-fizicko-lice", namespace = "http://www.ftn.uns.ac.rs/p1", propOrder = {
     "ime",
     "prezime"
 })
@@ -35,9 +36,9 @@ public class TPunomocnikFizickoLice
     extends TPunomocnik
 {
 
-    @XmlElement(namespace = "p1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
     protected String ime;
-    @XmlElement(namespace = "p1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
     protected String prezime;
 
     /**

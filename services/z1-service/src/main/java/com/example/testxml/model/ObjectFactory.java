@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlRegistry;
@@ -6,7 +7,7 @@ import javax.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the Z1.model package. 
+ * generated in the com.example.testxml.model package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -22,7 +23,7 @@ public class ObjectFactory {
 
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: Z1.model
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.example.testxml.model
      * 
      */
     public ObjectFactory() {
@@ -34,6 +35,14 @@ public class ObjectFactory {
      */
     public Zig createZig() {
         return new Zig();
+    }
+
+    /**
+     * Create an instance of {@link Obrasci }
+     * 
+     */
+    public Obrasci createObrasci() {
+        return new Obrasci();
     }
 
     /**
@@ -117,22 +126,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ObrazacZ1 }
-     * 
-     */
-    public ObrazacZ1 createObrazacZ1() {
-        return new ObrazacZ1();
-    }
-
-    /**
-     * Create an instance of {@link Naslov }
-     * 
-     */
-    public Naslov createNaslov() {
-        return new Naslov();
-    }
-
-    /**
      * Create an instance of {@link PopunjavaPodnosilac }
      * 
      */
@@ -149,11 +142,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PopunjavaZavod }
+     * Create an instance of {@link Naslov }
      * 
      */
-    public PopunjavaZavod createPopunjavaZavod() {
-        return new PopunjavaZavod();
+    public Naslov createNaslov() {
+        return new Naslov();
     }
 
     /**
@@ -165,6 +158,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link BrojPrijaveZiga }
+     * 
+     */
+    public BrojPrijaveZiga createBrojPrijaveZiga() {
+        return new BrojPrijaveZiga();
+    }
+
+    /**
+     * Create an instance of {@link Obrasci.ObrazacZ1 }
+     * 
+     */
+    public Obrasci.ObrazacZ1 createObrasciObrazacZ1() {
+        return new Obrasci.ObrazacZ1();
+    }
+
+    /**
      * Create an instance of {@link IdentifikacijaZiga }
      * 
      */
@@ -173,11 +182,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link BrojPrijaveZiga }
+     * Create an instance of {@link PopunjavaZavod }
      * 
      */
-    public BrojPrijaveZiga createBrojPrijaveZiga() {
-        return new BrojPrijaveZiga();
+    public PopunjavaZavod createPopunjavaZavod() {
+        return new PopunjavaZavod();
     }
 
     /**

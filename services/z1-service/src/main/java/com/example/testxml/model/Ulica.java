@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -44,12 +45,12 @@ import javax.xml.bind.annotation.XmlType;
     "naziv",
     "broj"
 })
-@XmlRootElement(name = "ulica", namespace = "z1")
+@XmlRootElement(name = "ulica", namespace = "http://www.ftn.uns.ac.rs/z1")
 public class Ulica {
 
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String naziv;
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String broj;
 
     /**
@@ -100,14 +101,4 @@ public class Ulica {
         this.broj = value;
     }
 
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        return "\n\t"+tabs+"Ulica{" +
-                "\n\t "+tabs+"Naziv: " + naziv +
-                "\n\t "+tabs+"Broj: " + broj +
-                '}';
-    }
 }

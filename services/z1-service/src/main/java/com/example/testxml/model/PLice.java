@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,7 +15,7 @@ import javax.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;complexType name="PLice">
  *   &lt;complexContent>
- *     &lt;extension base="{z1}Lice">
+ *     &lt;extension base="{http://www.ftn.uns.ac.rs/z1}Lice">
  *       &lt;sequence>
  *         &lt;element name="poslovno-ime" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
@@ -26,14 +27,14 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PLice", namespace = "z1", propOrder = {
+@XmlType(name = "PLice", namespace = "http://www.ftn.uns.ac.rs/z1", propOrder = {
     "poslovnoIme"
 })
 public class PLice
     extends Lice
 {
 
-    @XmlElement(name = "poslovno-ime", namespace = "z1", required = true)
+    @XmlElement(name = "poslovno-ime", namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String poslovnoIme;
 
     /**
@@ -60,13 +61,4 @@ public class PLice
         this.poslovnoIme = value;
     }
 
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        return "\n\t"+tabs+"PLice{" +
-                "\n\t"+tabs+"" + poslovnoIme +
-                '}';
-    }
 }

@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -17,15 +18,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{z1}ulica"/>
- *         &lt;element ref="{z1}mesto"/>
- *         &lt;element name="drzava" minOccurs="0">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;minLength value="1"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
+ *         &lt;element ref="{http://www.ftn.uns.ac.rs/z1}ulica"/>
+ *         &lt;element ref="{http://www.ftn.uns.ac.rs/z1}mesto"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,14 +31,14 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "ulica",
-    "mesto",
+    "mesto"
 })
-@XmlRootElement(name = "adresa", namespace = "z1")
+@XmlRootElement(name = "adresa", namespace = "http://www.ftn.uns.ac.rs/z1")
 public class Adresa {
 
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected Ulica ulica;
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected Mesto mesto;
 
     /**
@@ -95,22 +89,4 @@ public class Adresa {
         this.mesto = value;
     }
 
-    /**
-     * Gets the value of the drzava property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        return "\n"+tabs+"Adresa{" +
-                "\n\t"+tabs+"" + ulica.toString(numOfTabs+1) +
-                ",\n\t"+tabs+"" + mesto.toString(numOfTabs+1) +
-                '}';
-    }
 }

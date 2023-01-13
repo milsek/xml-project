@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -17,8 +18,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{z1}prilozi-uz-zahtev"/>
- *         &lt;element ref="{z1}identifikacija-ziga"/>
+ *         &lt;element ref="{http://www.ftn.uns.ac.rs/z1}prilozi-uz-zahtev"/>
+ *         &lt;element ref="{http://www.ftn.uns.ac.rs/z1}identifikacija-ziga"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -32,12 +33,12 @@ import javax.xml.bind.annotation.XmlType;
     "priloziUzZahtev",
     "identifikacijaZiga"
 })
-@XmlRootElement(name = "popunjava-zavod", namespace = "z1")
+@XmlRootElement(name = "popunjava-zavod", namespace = "http://www.ftn.uns.ac.rs/z1")
 public class PopunjavaZavod {
 
-    @XmlElement(name = "prilozi-uz-zahtev", namespace = "z1", required = true)
+    @XmlElement(name = "prilozi-uz-zahtev", namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected PriloziUzZahtev priloziUzZahtev;
-    @XmlElement(name = "identifikacija-ziga", namespace = "z1", required = true)
+    @XmlElement(name = "identifikacija-ziga", namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected IdentifikacijaZiga identifikacijaZiga;
 
     /**
@@ -88,14 +89,4 @@ public class PopunjavaZavod {
         this.identifikacijaZiga = value;
     }
 
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        return "\n\t"+tabs+"PopunjavaZavod{" +
-                "\n\t"+tabs+"" + priloziUzZahtev.toString(numOfTabs+1) +
-                "\n\t"+tabs+"" + identifikacijaZiga.toString(numOfTabs+1) +
-                '}';
-    }
 }

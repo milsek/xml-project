@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -31,6 +32,13 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
+ *         &lt;element name="drzava" minOccurs="0">
+ *           &lt;simpleType>
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *               &lt;minLength value="1"/>
+ *             &lt;/restriction>
+ *           &lt;/simpleType>
+ *         &lt;/element>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -43,17 +51,16 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "naziv",
     "postanskiBroj",
-        "drzava"
+    "drzava"
 })
-@XmlRootElement(name = "mesto", namespace = "z1")
+@XmlRootElement(name = "mesto", namespace = "http://www.ftn.uns.ac.rs/z1")
 public class Mesto {
 
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String naziv;
-    @XmlElement(name = "postanski-broj", namespace = "z1", required = true)
+    @XmlElement(name = "postanski-broj", namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String postanskiBroj;
-
-    @XmlElement(namespace = "z1")
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1")
     protected String drzava;
 
     /**
@@ -104,33 +111,28 @@ public class Mesto {
         this.postanskiBroj = value;
     }
 
+    /**
+     * Gets the value of the drzava property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
     public String getDrzava() {
         return drzava;
     }
 
     /**
      * Sets the value of the drzava property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setDrzava(String value) {
         this.drzava = value;
     }
 
-
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        String drzavaDeo = drzava != null ? drzava : "Srbija";
-        return "\n\t"+tabs+"Mesto{" +
-                "\n\t"+tabs+"Naziv: " + naziv +
-                "\n\t"+tabs+"Postanski broj: " + postanskiBroj +
-                "\n\t"+tabs+"Drzava:  " + drzavaDeo +
-                '}';
-    }
 }

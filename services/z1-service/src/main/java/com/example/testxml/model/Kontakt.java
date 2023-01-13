@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -52,14 +53,14 @@ import javax.xml.bind.annotation.XmlType;
     "email",
     "faks"
 })
-@XmlRootElement(name = "kontakt", namespace = "z1")
+@XmlRootElement(name = "kontakt", namespace = "http://www.ftn.uns.ac.rs/z1")
 public class Kontakt {
 
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String telefon;
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String email;
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String faks;
 
     /**
@@ -134,15 +135,4 @@ public class Kontakt {
         this.faks = value;
     }
 
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        return "\n\t"+tabs+"Kontakt{" +
-                "\n\t"+tabs+"Telefon: " + telefon +
-                "\n\t"+tabs+"Email: "  + email +
-                "\n\t"+tabs+"Faks: " + faks +
-                '}';
-    }
 }

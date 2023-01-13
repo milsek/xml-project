@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -38,12 +39,12 @@ import javax.xml.bind.annotation.XmlType;
     "klasa",
     "iznos"
 })
-@XmlRootElement(name = "klasa-graficko-resenje", namespace = "z1")
+@XmlRootElement(name = "klasa-graficko-resenje", namespace = "http://www.ftn.uns.ac.rs/z1")
 public class KlasaGrafickoResenje {
 
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String klasa;
-    @XmlElement(namespace = "z1")
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1")
     protected double iznos;
 
     /**
@@ -86,14 +87,4 @@ public class KlasaGrafickoResenje {
         this.iznos = value;
     }
 
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        return "\n\t"+tabs+"KlasaGrafickoResenje{" +
-                "\n\t"+tabs+"" + klasa +
-                "\n\t"+tabs+"" + iznos +
-                '}';
-    }
 }

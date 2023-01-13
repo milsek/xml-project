@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -44,24 +45,24 @@ import javax.xml.bind.annotation.XmlType;
     "dokazOPravuPrvenstva",
     "dokazOUplatiTakse"
 })
-@XmlRootElement(name = "prilozi-uz-zahtev", namespace = "z1")
+@XmlRootElement(name = "prilozi-uz-zahtev", namespace = "http://www.ftn.uns.ac.rs/z1")
 public class PriloziUzZahtev {
 
-    @XmlElement(name = "primerak-znaka", namespace = "z1")
+    @XmlElement(name = "primerak-znaka", namespace = "http://www.ftn.uns.ac.rs/z1")
     protected String primerakZnaka;
-    @XmlElement(name = "spisak-robe-i-usluga", namespace = "z1")
+    @XmlElement(name = "spisak-robe-i-usluga", namespace = "http://www.ftn.uns.ac.rs/z1")
     protected String spisakRobeIUsluga;
-    @XmlElement(namespace = "z1")
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1")
     protected String punomocje;
-    @XmlElement(name = "generalno-punomocje", namespace = "z1")
+    @XmlElement(name = "generalno-punomocje", namespace = "http://www.ftn.uns.ac.rs/z1")
     protected String generalnoPunomocje;
-    @XmlElement(name = "punomocje-naknadno-dostavljeno", namespace = "z1")
+    @XmlElement(name = "punomocje-naknadno-dostavljeno", namespace = "http://www.ftn.uns.ac.rs/z1")
     protected String punomocjeNaknadnoDostavljeno;
-    @XmlElement(name = "opsti-akt-o-kolektivnom-zigu", namespace = "z1")
+    @XmlElement(name = "opsti-akt-o-kolektivnom-zigu", namespace = "http://www.ftn.uns.ac.rs/z1")
     protected String opstiAktOKolektivnomZigu;
-    @XmlElement(name = "dokaz-o-pravu-prvenstva", namespace = "z1")
+    @XmlElement(name = "dokaz-o-pravu-prvenstva", namespace = "http://www.ftn.uns.ac.rs/z1")
     protected String dokazOPravuPrvenstva;
-    @XmlElement(name = "dokaz-o-uplati-takse", namespace = "z1")
+    @XmlElement(name = "dokaz-o-uplati-takse", namespace = "http://www.ftn.uns.ac.rs/z1")
     protected String dokazOUplatiTakse;
 
     /**
@@ -256,21 +257,4 @@ public class PriloziUzZahtev {
         this.dokazOUplatiTakse = value;
     }
 
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        String primerak = !primerakZnaka.isEmpty()  ? "\n\t" + tabs + "" + primerakZnaka : "";
-        String spisak = !spisakRobeIUsluga.isEmpty()  ? "\n\t" + tabs + "" + spisakRobeIUsluga : "";
-        String punom = !punomocje.isEmpty()  ? "\n\t" + tabs + "" + punomocje : "";
-        String genPunom = !generalnoPunomocje.isEmpty()  ? "\n\t" + tabs + "" + generalnoPunomocje : "";
-        String punNak = !punomocjeNaknadnoDostavljeno.isEmpty()  ? "\n\t" + tabs + "" + punomocjeNaknadnoDostavljeno : "";
-        String akt = !opstiAktOKolektivnomZigu.isEmpty()  ? "\n\t" + tabs + "" + opstiAktOKolektivnomZigu : "";
-        String dokaz = !dokazOPravuPrvenstva.isEmpty() ? "\n\t" + tabs + "" + dokazOPravuPrvenstva : "";
-        String dokazUplate = !dokazOUplatiTakse.isEmpty()  ? "\n\t" + tabs + "" + dokazOUplatiTakse : "";
-        return "\n\t"+tabs+"PriloziUzZahtev{" +
-                primerak + spisak + punom + genPunom + punNak + akt + dokaz + dokazUplate+
-                '}';
-    }
 }

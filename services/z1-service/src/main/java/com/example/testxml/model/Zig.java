@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -74,14 +75,14 @@ import javax.xml.bind.annotation.XmlType;
     "znakZiga",
     "izgledZnaka"
 })
-@XmlRootElement(name = "zig", namespace = "z1")
+@XmlRootElement(name = "zig", namespace = "http://www.ftn.uns.ac.rs/z1")
 public class Zig {
 
-    @XmlElement(name = "tip-ziga", namespace = "z1", required = true)
+    @XmlElement(name = "tip-ziga", namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String tipZiga;
-    @XmlElement(name = "znak-ziga", namespace = "z1", required = true)
+    @XmlElement(name = "znak-ziga", namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected Zig.ZnakZiga znakZiga;
-    @XmlElement(name = "izgled-znaka", namespace = "z1", required = true)
+    @XmlElement(name = "izgled-znaka", namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String izgledZnaka;
 
     /**
@@ -199,9 +200,9 @@ public class Zig {
     })
     public static class ZnakZiga {
 
-        @XmlElement(namespace = "z1")
+        @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1")
         protected String postojeci;
-        @XmlElement(namespace = "z1")
+        @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1")
         protected String drugi;
 
         /**
@@ -251,28 +252,7 @@ public class Zig {
         public void setDrugi(String value) {
             this.drugi = value;
         }
-        public String toString(int numOfTabs) {
-            String tabs = "";
-            for(int i = 0; i < numOfTabs; i++){
-                tabs += "\t";
-            }
-            String znak = postojeci != null ? postojeci : drugi;
-            return "ZnakZiga{"+
-                    "\n\t"+tabs+"" + postojeci +
-                    '}';
-        }
 
     }
 
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        return "\n\t"+tabs+"Zig{" +
-                "\n\t"+tabs+"" + tipZiga +
-                "\n\t"+tabs+"" + znakZiga.toString(numOfTabs + 1) +
-                "\n\t"+tabs+"" + izgledZnaka +
-                '}';
-    }
 }

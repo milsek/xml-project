@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import java.util.ArrayList;
@@ -19,12 +20,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="podnosilac-prijave" type="{z1}Lice" maxOccurs="5"/>
- *         &lt;element name="punomocnik" type="{z1}Lice"/>
- *         &lt;element name="zajednicki-predstavnik" type="{z1}Lice"/>
- *         &lt;element ref="{z1}zig"/>
- *         &lt;element ref="{z1}znak"/>
- *         &lt;element ref="{z1}nicanska-klasifikacija"/>
+ *         &lt;element name="podnosilac-prijave" type="{http://www.ftn.uns.ac.rs/z1}Lice" maxOccurs="5"/>
+ *         &lt;element name="punomocnik" type="{http://www.ftn.uns.ac.rs/z1}Lice"/>
+ *         &lt;element name="zajednicki-predstavnik" type="{http://www.ftn.uns.ac.rs/z1}Lice"/>
+ *         &lt;element ref="{http://www.ftn.uns.ac.rs/z1}zig"/>
+ *         &lt;element ref="{http://www.ftn.uns.ac.rs/z1}znak"/>
+ *         &lt;element ref="{http://www.ftn.uns.ac.rs/z1}nicanska-klasifikacija"/>
  *         &lt;element name="pravo-prvenstva-i-osnov">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -32,7 +33,7 @@ import javax.xml.bind.annotation.XmlType;
  *             &lt;/restriction>
  *           &lt;/simpleType>
  *         &lt;/element>
- *         &lt;element ref="{z1}placene-takse"/>
+ *         &lt;element ref="{http://www.ftn.uns.ac.rs/z1}placene-takse"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -52,24 +53,24 @@ import javax.xml.bind.annotation.XmlType;
     "pravoPrvenstvaIOsnov",
     "placeneTakse"
 })
-@XmlRootElement(name = "popunjava-podnosilac", namespace = "z1")
+@XmlRootElement(name = "popunjava-podnosilac", namespace = "http://www.ftn.uns.ac.rs/z1")
 public class PopunjavaPodnosilac {
 
-    @XmlElement(name = "podnosilac-prijave", namespace = "z1", required = true)
+    @XmlElement(name = "podnosilac-prijave", namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected List<Lice> podnosilacPrijave;
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected Lice punomocnik;
-    @XmlElement(name = "zajednicki-predstavnik", namespace = "z1", required = true)
+    @XmlElement(name = "zajednicki-predstavnik", namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected Lice zajednickiPredstavnik;
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected Zig zig;
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected Znak znak;
-    @XmlElement(name = "nicanska-klasifikacija", namespace = "z1", required = true)
+    @XmlElement(name = "nicanska-klasifikacija", namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected NicanskaKlasifikacija nicanskaKlasifikacija;
-    @XmlElement(name = "pravo-prvenstva-i-osnov", namespace = "z1", required = true)
+    @XmlElement(name = "pravo-prvenstva-i-osnov", namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String pravoPrvenstvaIOsnov;
-    @XmlElement(name = "placene-takse", namespace = "z1", required = true)
+    @XmlElement(name = "placene-takse", namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected PlaceneTakse placeneTakse;
 
     /**
@@ -269,24 +270,4 @@ public class PopunjavaPodnosilac {
         this.placeneTakse = value;
     }
 
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        String lica = "";
-        for(Object popunjavaPodnosilac : podnosilacPrijave){
-            lica += ((FLice)popunjavaPodnosilac).toString(numOfTabs + 1);
-        }
-        return "\n\t"+tabs+"PopunjavaPodnosilac{" +
-                "\n\t"+tabs+"" + lica +
-                "\n\t"+tabs+"" + punomocnik.toString(numOfTabs+1) +
-                "\n\t"+tabs+"" + zajednickiPredstavnik.toString(numOfTabs+1) +
-                "\n\t"+tabs+"" + zig.toString(numOfTabs+1) +
-                "\n\t"+tabs+"" + znak.toString(numOfTabs+1) +
-                "\n\t"+tabs+"" + nicanskaKlasifikacija.toString(numOfTabs+1) +
-                "\n\t"+tabs+"" + pravoPrvenstvaIOsnov +
-                "\n\t"+tabs+"" + placeneTakse.toString(numOfTabs+1) +
-                '}';
-    }
 }

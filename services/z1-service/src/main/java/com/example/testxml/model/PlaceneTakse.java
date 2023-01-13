@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -18,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="osnovna-taksa" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element ref="{z1}klasa-graficko-resenje"/>
+ *         &lt;element ref="{http://www.ftn.uns.ac.rs/z1}klasa-graficko-resenje"/>
  *         &lt;element name="ukupno" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -34,14 +35,14 @@ import javax.xml.bind.annotation.XmlType;
     "klasaGrafickoResenje",
     "ukupno"
 })
-@XmlRootElement(name = "placene-takse", namespace = "z1")
+@XmlRootElement(name = "placene-takse", namespace = "http://www.ftn.uns.ac.rs/z1")
 public class PlaceneTakse {
 
-    @XmlElement(name = "osnovna-taksa", namespace = "z1")
+    @XmlElement(name = "osnovna-taksa", namespace = "http://www.ftn.uns.ac.rs/z1")
     protected double osnovnaTaksa;
-    @XmlElement(name = "klasa-graficko-resenje", namespace = "z1", required = true)
+    @XmlElement(name = "klasa-graficko-resenje", namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected KlasaGrafickoResenje klasaGrafickoResenje;
-    @XmlElement(namespace = "z1")
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1")
     protected double ukupno;
 
     /**
@@ -100,16 +101,4 @@ public class PlaceneTakse {
         this.ukupno = value;
     }
 
-
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        return "\n\t"+tabs+"PlaceneTakse{" +
-                "\n\t"+tabs+"Osnovna taksa: " + osnovnaTaksa +
-                "\n\t"+tabs+"" + klasaGrafickoResenje.toString(numOfTabs + 1) +
-                "\n\t"+tabs+"Ukupno: " + ukupno +
-                '}';
-    }
 }

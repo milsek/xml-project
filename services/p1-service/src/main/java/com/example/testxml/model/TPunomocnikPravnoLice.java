@@ -1,9 +1,10 @@
+
 package com.example.testxml.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -12,28 +13,28 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="t-punomocnik-pravno-lice">
- *   &lt;complexContent>
- *     &lt;extension base="{p1}t-punomocnik">
- *       &lt;sequence>
- *         &lt;element name="poslovno-ime" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="t-punomocnik-pravno-lice"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.ftn.uns.ac.rs/p1}t-punomocnik"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="poslovno-ime" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "t-punomocnik-pravno-lice", namespace = "p1", propOrder = {
+@XmlType(name = "t-punomocnik-pravno-lice", namespace = "http://www.ftn.uns.ac.rs/p1", propOrder = {
     "poslovnoIme"
 })
 public class TPunomocnikPravnoLice
     extends TPunomocnik
 {
 
-    @XmlElement(name = "poslovno-ime", namespace = "p1", required = true)
+    @XmlElement(name = "poslovno-ime", namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
     protected String poslovnoIme;
 
     /**

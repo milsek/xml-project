@@ -1,10 +1,11 @@
+
 package com.example.testxml.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -13,27 +14,27 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="t-punomocnik">
- *   &lt;complexContent>
- *     &lt;extension base="{p1}t-lice">
- *       &lt;attribute name="tip" use="required">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;enumeration value="Punomocnik za zastupanje"/>
- *             &lt;enumeration value="Punomocnik za prijem pismena"/>
- *             &lt;enumeration value="Zajednicki predstavnik"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="t-punomocnik"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.ftn.uns.ac.rs/p1}t-lice"&gt;
+ *       &lt;attribute name="tip" use="required"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *             &lt;enumeration value="Punomocnik za zastupanje"/&gt;
+ *             &lt;enumeration value="Punomocnik za prijem pismena"/&gt;
+ *             &lt;enumeration value="Zajednicki predstavnik"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "t-punomocnik", namespace = "p1")
+@XmlType(name = "t-punomocnik", namespace = "http://www.ftn.uns.ac.rs/p1")
 @XmlSeeAlso({
     TPunomocnikFizickoLice.class,
     TPunomocnikPravnoLice.class

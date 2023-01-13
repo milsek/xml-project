@@ -1,3 +1,4 @@
+
 package com.example.testxml.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -17,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{z1}boje"/>
+ *         &lt;element ref="{http://www.ftn.uns.ac.rs/z1}boje"/>
  *         &lt;element name="transliteracija" minOccurs="0">
  *           &lt;simpleType>
  *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -54,16 +55,16 @@ import javax.xml.bind.annotation.XmlType;
     "prevod",
     "opis"
 })
-@XmlRootElement(name = "znak", namespace = "z1")
+@XmlRootElement(name = "znak", namespace = "http://www.ftn.uns.ac.rs/z1")
 public class Znak {
 
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected Boje boje;
-    @XmlElement(namespace = "z1")
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1")
     protected String transliteracija;
-    @XmlElement(namespace = "z1")
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1")
     protected String prevod;
-    @XmlElement(namespace = "z1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/z1", required = true)
     protected String opis;
 
     /**
@@ -162,16 +163,4 @@ public class Znak {
         this.opis = value;
     }
 
-    public String toString(int numOfTabs) {
-        String tabs = "";
-        for(int i = 0; i < numOfTabs; i++){
-            tabs += "\t";
-        }
-        return "\n\t"+tabs+"Znak{" +
-                "\n\t"+tabs+"" + boje.toString(numOfTabs + 1) +
-                "\n\t"+tabs+"Transliteracija: " + transliteracija +
-                "\n\t"+tabs+"Prevod: " + prevod +
-                "\n\t"+tabs+"Opis: " + opis +
-                '}';
-    }
 }

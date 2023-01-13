@@ -8,17 +8,18 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for t-podnosilac-fizicko-lice complex type.
+ * <p>Java class for t-fizicko-lice complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="t-podnosilac-fizicko-lice"&gt;
+ * &lt;complexType name="t-fizicko-lice"&gt;
  *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.ftn.uns.ac.rs/p1}t-podnosilac"&gt;
+ *     &lt;extension base="{http://www.ftn.uns.ac.rs/a1}t-lice"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="ime" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="prezime" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="adresa" type="{http://www.ftn.uns.ac.rs/a1}t-adresa"/&gt;
  *         &lt;element name="drzavljanstvo" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/extension&gt;
@@ -29,20 +30,23 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "t-podnosilac-fizicko-lice", namespace = "http://www.ftn.uns.ac.rs/p1", propOrder = {
+@XmlType(name = "t-fizicko-lice", namespace = "http://www.ftn.uns.ac.rs/a1", propOrder = {
     "ime",
     "prezime",
+    "adresa",
     "drzavljanstvo"
 })
-public class TPodnosilacFizickoLice
-    extends TPodnosilac
+public class TFizickoLice
+    extends TLice
 {
 
-    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
     protected String ime;
-    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
     protected String prezime;
-    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/p1", required = true)
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
+    protected TAdresa adresa;
+    @XmlElement(namespace = "http://www.ftn.uns.ac.rs/a1", required = true)
     protected String drzavljanstvo;
 
     /**
@@ -91,6 +95,30 @@ public class TPodnosilacFizickoLice
      */
     public void setPrezime(String value) {
         this.prezime = value;
+    }
+
+    /**
+     * Gets the value of the adresa property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TAdresa }
+     *     
+     */
+    public TAdresa getAdresa() {
+        return adresa;
+    }
+
+    /**
+     * Sets the value of the adresa property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TAdresa }
+     *     
+     */
+    public void setAdresa(TAdresa value) {
+        this.adresa = value;
     }
 
     /**
